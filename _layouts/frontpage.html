@@ -1,0 +1,32 @@
+{% include header.html %}
+
+<div id="header" class="centertext">
+  <img id="profile-img" alt="profile picture" src="/static/img/profile.jpg"></img><br />
+  <p id="description">{{ description }}</p>{{ content }}
+  {% include frontpage-navbar.html %}
+</div>
+
+<div class="centertext">
+  <h2>Log</h2>
+  {% for post in paginator.posts %}
+  <div class="post">
+    <span class="post-date">{{ post.date | date_to_string }}</span> - 
+    <b class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></b>
+  </div>
+  {% endfor %}
+
+  <div class="pagination">
+    {% if paginator.next_page %}
+      <a href="{{ site.baseurl }}page{{ paginator.next_page }}">Older</a>
+    {% endif %}
+    {% if paginator.previous_page %}
+      {% if paginator.page == 2 %}
+        <a href="{{ site.baseurl }}">Newer</a>
+      {% else %}
+        <a href="{{ site.baseurl }}page{{ paginator.previous_page }}">Newer</a>
+      {% endif %}
+    {% endif %}
+  </div>
+</div>
+
+{% include footer.html %}

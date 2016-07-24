@@ -1,0 +1,55 @@
+#main {
+  max-width: 500px;
+  margin: 25px;
+  padding: 0;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.4;
+}
+em {
+  font-style: normal;
+  background: yellow;
+}
+hr {
+  border: 0;
+  color: black;
+  background-color: black;
+  height: 1px;
+  width: 80%;
+  margin-bottom: 4em;
+}
+#header {
+  margin-bottom: 4em;
+}
+#profile-img {
+  border-radius: 50%;
+  margin-bottom: 20px;
+  height: 250px;
+}
+.centertext {
+  text-align: center;
+}
+#links {
+  margin-top: 1.2em;
+  padding: 0;
+}
+#links li {
+  display: inline;
+  list-style-type: none;
+}
+#links li:before {
+  content: " | ";
+}
+#links li:first-child:before {
+  content: none;
+}
+.pagination {
+  margin-top: 20px;
+  text-align: right;
+}
+#blog-post-title {
+  margin: 0 auto 2em auto;
+}
+#blog-post-title h3, #blog-post-title h4 {
+  margin: 0.2em auto;
+}

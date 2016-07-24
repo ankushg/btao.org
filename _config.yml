@@ -1,0 +1,9 @@
+# top level stuff you probably don't need to touch
+highlighter: pygments
+url: "http://btao.org"
+sitetitle: "btao.org"
+markdown: rdiscount
+rdiscount:
+  extensions: [smart]
+paginate: 5
+gems: [jekyll-paginate]

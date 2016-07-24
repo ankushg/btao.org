@@ -1,0 +1,24 @@
+---
+layout: layout
+---
+
+{% include header.html %}
+{% include page-navbar.html %}
+
+<hr />
+
+<div class="blog-post">
+  <div id="blog-post-title" class="centertext">
+    <h3>
+      <strong><a href="{{ page.url }}">{{ page.title }}</a></strong>
+    </h3>
+    <h4>
+    {{ page.date | date: "%B %e, %Y" }}
+    </h4>
+  </div>
+  <div class="blog-post-content">
+    {{ content }}
+  </div>
+</div>
+
+{% include footer.html %}
