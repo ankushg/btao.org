@@ -9,10 +9,12 @@
 <div class="centertext">
   <h2>Log</h2>
   {% for post in paginator.posts %}
-  <div class="post">
-    <span class="post-date">{{ post.date | date_to_string }}</span> - 
-    <b class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></b>
-  </div>
+    {% unless post.hidden %}
+      <div class="post">
+        <span class="post-date">{{ post.date | date_to_string }}</span> - 
+        <b class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></b>
+      </div>
+    {% endunless %}
   {% endfor %}
 
   <div class="pagination">
