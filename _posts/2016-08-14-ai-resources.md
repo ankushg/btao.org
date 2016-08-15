@@ -16,6 +16,7 @@ reference on various AI topics.
 * [Information Theory, Inference and Learning Algorithms](https://www.amazon.com/Information-Theory-Inference-Learning-Algorithms/dp/0521642981)
 * [Foundations of Machine Learning](https://www.amazon.com/dp/026201825X)
 * [Pattern Recognition and Machine Learning](https://www.microsoft.com/en-us/research/people/cmbishop/)
+* [A Course in Machine Learning](http://ciml.info/)
 
 ## Notes
 * [Andrej Karpathy's CS231n notes](https://cs231n.github.io/) - convolutional neural networks
@@ -26,6 +27,7 @@ reference on various AI topics.
 * [Machine learning summer school](https://www.youtube.com/playlist?list=PLZSO_6-bSqHQCIYxE3ycGLXHMjK3XV7Iz)
 * [Andrew Ng's machine learning course](http://openclassroom.stanford.edu/MainFolder/CoursePage.php?course=MachineLearning)
 * [Neural Networks for Machine Learning w. Geoffrey Hinton](https://www.coursera.org/learn/neural-networks)
+* [Iain Murray's introduction to machine learning](http://videolectures.net/bootcamp2010_murray_iml/#)
 
 ## Other
 * [20 questions to detect fake data scientists](http://www.kdnuggets.com/2016/01/20-questions-to-detect-fake-data-scientists.html)
