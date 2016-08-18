@@ -1,6 +1,6 @@
 ---
 layout: note
-title: "Jailbreaking the Kindle Paperwhite 3"
+title: "Academic papers on the Kindle"
 ---
 
 The newest Kindle Paperwhite (as of August 2016) can be great for reading academic papers as well as books, but you have to do a bit of work to make two-column PDFs look nice. The first option is to convert your .pdfs on your computer using [k2pdfopt](http://www.willus.com/k2pdfopt/), but I know I'll forget to do this.
