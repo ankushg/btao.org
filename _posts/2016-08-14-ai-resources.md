@@ -27,7 +27,9 @@ reference on various AI topics.
 * [Machine learning summer school](https://www.youtube.com/playlist?list=PLZSO_6-bSqHQCIYxE3ycGLXHMjK3XV7Iz)
 * [Andrew Ng's machine learning course](http://openclassroom.stanford.edu/MainFolder/CoursePage.php?course=MachineLearning)
 * [Neural Networks for Machine Learning w. Geoffrey Hinton](https://www.coursera.org/learn/neural-networks)
-* [Iain Murray's introduction to machine learning](http://videolectures.net/bootcamp2010_murray_iml/#)
+* [Iain Murray's introduction to machine learning](http://videolectures.net/bootcamp2010_murray_iml/#) - helped me gain a more intuitive understanding of basic supervised learning concepts
 
 ## Other
+* [A Visual Introduction to Machine Learning](http://www.r2d3.us/visual-intro-to-machine-learning-part-1/)
 * [20 questions to detect fake data scientists](http://www.kdnuggets.com/2016/01/20-questions-to-detect-fake-data-scientists.html)
+* [The Import AI newsletter by Jack Clark](https://jack-clark.net/)
