@@ -9,6 +9,7 @@ reference on various AI topics.
 
 ## Papers
 * [Facebook Research](https://research.facebook.com/publications/)
+* [A Few Useful Things to Know About Machine Learning by Pedro Domingos](https://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf)
 
 ## Books
 * [Data Mining: Practical Machine Learning Tools and Techniques](http://www.cs.waikato.ac.nz/~ml/weka/book.html)
@@ -31,5 +32,6 @@ reference on various AI topics.
 
 ## Other
 * [A Visual Introduction to Machine Learning](http://www.r2d3.us/visual-intro-to-machine-learning-part-1/)
+* [The Unreasonable Effectiveness of Recurrent Neural Networks](https://karpathy.github.io/2015/05/21/rnn-effectiveness/)
 * [20 questions to detect fake data scientists](http://www.kdnuggets.com/2016/01/20-questions-to-detect-fake-data-scientists.html)
 * [The Import AI newsletter by Jack Clark](https://jack-clark.net/)
