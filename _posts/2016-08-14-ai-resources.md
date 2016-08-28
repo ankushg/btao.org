@@ -2,6 +2,7 @@
 layout: post
 title: "AI Resources"
 hidden: true
+sitemap: false
 ---
 
 This is a collection of resources that I have found useful for learning or as 

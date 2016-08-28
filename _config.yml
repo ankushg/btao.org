@@ -6,9 +6,11 @@ markdown: rdiscount
 rdiscount:
   extensions: [smart]
 paginate: 5
-gems: [jekyll-paginate]
 collections:
   notes:
     output: true
     permalink: /notes/:title.html
 exclude: [README.md]
+gems:
+  - jekyll-paginate
+  - jekyll-sitemap
