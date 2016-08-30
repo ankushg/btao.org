@@ -8,7 +8,7 @@ Cognitive Science student at the University of Edinburgh
 <div id="webaddress">
 <span class="fa fa-envelope-o"></span> <a href="mailto:tao@btao.org">tao@btao.org</a>
  | 
-<span class="fa fa-github"></span> <a href="https://github.com/brortao">brortao</a> 
+<span class="fa fa-github"></span> <a href="https://github.com/brortao">GitHub</a> 
 </div>
 
 

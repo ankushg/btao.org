@@ -74,12 +74,12 @@ code {
 	font-size: 60%;
 	/*line-height: 1em;*/
 	font-family: Menlo,monospace,sans-serif;
-	color: #ccc;
+	color: #595959;
 }
 
 p code {
 	position: absolute;
-	left: -11%;
+	left: -16%;
 }
 
 
@@ -88,7 +88,9 @@ ul {
 	left: 28%;
 	width: 65%;
 	margin-bottom: 1em;
-	/*margin-top: -0.5em;*/
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
 }
 
 /*uncomment to get dashes in the list*/
@@ -124,6 +126,7 @@ h1 {
 	line-height: 1em;
 	position: relative;
 	left: 28%;
+    color: #a00;
 }
 
 h1+p { 
@@ -168,10 +171,10 @@ a:hover {
 #webaddress {
 	margin-top: 1em;
 	position: relative;
-	left: 28%;
-	color: #ccc;
+	margin-left: 28%;
+	color: #595959;
 	font-family: Menlo,monospace,sans-serif;
-	font-size: 80%;
+	font-size: 1em;
 }
 
 #webaddress a {
