@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    margin-top: 5em;
 }
 ol, ul {
 	list-style: none;
@@ -175,6 +176,10 @@ a:hover {
 	color: #595959;
 	font-family: Menlo,monospace,sans-serif;
 	font-size: 1em;
+}
+
+#webaddress .noprint {
+    display: none;
 }
 
 #webaddress a {
