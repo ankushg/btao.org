@@ -16,14 +16,15 @@ Cognitive Science student at the University of Edinburgh
 
 ## Currently
 
-I'm an undergraduate student at the University of Edinburgh, where I study Cognitive Science. I'm particularly interested in machine learning and philosophy of mind. My thesis on using neural networks to create realistic talking 3D agents.
+I'm an undergraduate student at the University of Edinburgh where I study Cognitive Science. I'm particularly interested in machine learning and philosophy of mind. My thesis is on using neural networks to create realistic talking 3D agents.
 
 ## Education
 
 `2013 - now`
 **University of Edinburgh** BSc (Hons) Cognitive Science
 
-`2015 - 2016` **University of Connecticut** International exchange
+`2015 - 2016`
+**University of Connecticut** International exchange student
 
 `2015`
 **University of Copenhagen** Summer course on Danish philosopher Søren Kierkegaard
