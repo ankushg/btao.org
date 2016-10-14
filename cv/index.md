@@ -48,15 +48,15 @@ I'm an undergraduate student at the University of Edinburgh where I study Cognit
 **eusay** Web app built for the Edinburgh University Students' Association. Later won the Jisc Summer of Student Innovation competition.
 
 ## Extracurriculars
-`2013 - 2014` **Member** Tibet Society
+`2016` **Student Leader** InfPALS - Informatics peer support
 
-`2013 - 2015` **Member** Student Voice for Animal Rights
-
-`2014 - 2015` **Secretary** Student Voice for Animal Rights
+`2015 - 2016` **Member** University of Connecticut Philosophy Club
 
 `2015 - 2016` **Member** University of Connecticut chapter of the National Organization for Women
 
-`2015 - 2016` **Member** University of Connecticut Philosophy Club
+`2014 - 2015` **Secretary** Student Voice for Animal Rights
+
+`2013 - 2015` **Member** Student Voice for Animal Rights
 
 ## Technical skills
 
