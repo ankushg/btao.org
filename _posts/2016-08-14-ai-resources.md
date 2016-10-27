@@ -23,11 +23,14 @@ reference on various AI topics.
 * [Andrew Ng's CS229 notes](http://cs229.stanford.edu/materials.html) - machine learning
 * [CS22d: Deep Learning for NLP](http://cs224d.stanford.edu/syllabus.html)
 
+## Articles
+* [A beginner's guide to RNNs and LSTMs](https://deeplearning4j.org/lstm.html)
+
 ## Videos / Courses
 * [Machine learning summer school](https://www.youtube.com/playlist?list=PLZSO_6-bSqHQCIYxE3ycGLXHMjK3XV7Iz)
 * [Andrew Ng's machine learning course](http://openclassroom.stanford.edu/MainFolder/CoursePage.php?course=MachineLearning)
 * [Neural Networks for Machine Learning w. Geoffrey Hinton](https://www.coursera.org/learn/neural-networks)
-* [Iain Murray's introduction to machine learning](http://videolectures.net/bootcamp2010_murray_iml/#) - helped me gain a more intuitive understanding of basic supervised learning concepts
+* [Iain Murray's introduction to machine learning](http://videolectures.net/bootcamp2010_murray_iml/#)
 * [How Convolutional Neural Networks Work](https://www.youtube.com/watch?v=FmpDIaiMIeA) - 25 minute video that gives a basic overview of CNNs
 
 ## Other
