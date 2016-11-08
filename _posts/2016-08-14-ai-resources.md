@@ -3,8 +3,8 @@ layout: post
 title: "AI Resources"
 ---
 
-This is a collection of resources that I have found useful for learning or as 
-reference on various AI topics.
+This is a collection of resources on various AI topics (mostly ML). There's a
+lot here - it's mostly for reference!
 
 ## Papers
 * [Facebook Research](https://research.facebook.com/publications/)
@@ -24,6 +24,7 @@ reference on various AI topics.
 * [CS22d: Deep Learning for NLP](http://cs224d.stanford.edu/syllabus.html)
 
 ## Articles
+* [Understanding LSTM networks](https://colah.github.io/posts/2015-08-Understanding-LSTMs/)
 * [A beginner's guide to RNNs and LSTMs](https://deeplearning4j.org/lstm.html)
 
 ## Videos / Courses
