@@ -37,6 +37,5 @@ lot here - it's mostly for reference!
 ## Other
 * [A Visual Introduction to Machine Learning](http://www.r2d3.us/visual-intro-to-machine-learning-part-1/)
 * [The Unreasonable Effectiveness of Recurrent Neural Networks](https://karpathy.github.io/2015/05/21/rnn-effectiveness/)
-* [20 questions to detect fake data scientists](http://www.kdnuggets.com/2016/01/20-questions-to-detect-fake-data-scientists.html)
 * [The Import AI newsletter by Jack Clark](https://jack-clark.net/)
 * [The Three Faces of Bayes](https://slackprop.wordpress.com/2016/08/28/the-three-faces-of-bayes/)
