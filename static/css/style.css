@@ -1,22 +1,22 @@
 #main {
-  max-width: 500px;
-  margin: 25px;
-  padding: 0;
   font-family: monospace;
   font-size: 14px;
   line-height: 1.4;
+  margin: 25px;
+  max-width: 500px;
+  padding: 0;
 }
 em {
-  font-style: normal;
   background: yellow;
+  font-style: normal;
 }
 hr {
+  background-color: black;
   border: 0;
   color: black;
-  background-color: black;
   height: 1px;
-  width: 80%;
   margin-bottom: 3em;
+  width: 80%;
 }
 #header {
   margin-bottom: 4em;
@@ -47,9 +47,9 @@ hr {
   margin-top: 20px;
   text-align: right;
 }
-#blog-post-title {
+#post-title {
   margin: 0 auto 2em auto;
 }
-#blog-post-title h3, #blog-post-title h4 {
+#post-title h3, #post-title h4 {
   margin: 0.2em auto;
 }
