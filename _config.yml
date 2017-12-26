@@ -11,6 +11,6 @@ collections:
     output: true
     permalink: /notes/:title.html
 exclude: [README.md]
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-sitemap
