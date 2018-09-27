@@ -10,7 +10,8 @@ collections:
   notes:
     output: true
     permalink: /notes/:title.html
-exclude: [README.md]
+exclude: [README.md, Gemfile, Gemfile.lock]
+include: [".well-known"]
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
