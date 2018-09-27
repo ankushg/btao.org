@@ -53,3 +53,6 @@ hr {
 #post-title h3, #post-title h4 {
   margin: 0.2em auto;
 }
+code {
+  background-color: #DCDCDC;
+}
