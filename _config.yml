@@ -1,17 +1,44 @@
-# top level stuff you probably don't need to touch
-highlighter: pygments
-url: "http://btao.org"
-sitetitle: "btao.org"
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Tao Bojlén
+email: tao@btao.org
+description: >- # this means to ignore newlines until "baseurl:"
+  The blog and portfolio of Tao Bror Bojlén.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://btao.org"
+
+# Build settings
 markdown: kramdown
-rdiscount:
-  extensions: [smart]
 paginate: 5
-collections:
-  notes:
-    output: true
-    permalink: /notes/:title.html
-exclude: [README.md, Gemfile, Gemfile.lock]
-include: [".well-known"]
 plugins:
+  - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
+include:
+  - .well-known
+  - .htaccess
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

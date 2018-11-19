@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "AI Resources"
+date: 2016-08-14
 ---
 
 This is a collection of resources on various AI topics (mostly ML). There's a

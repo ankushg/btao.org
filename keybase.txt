@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/tao_oat
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://btao.org
+  * I am tao_oat (https://keybase.io/tao_oat) on keybase.
+  * I have a public key ASAevOpvuMxzEvfCEZJHhfmVAeHdmqba74W6DkmP0THlrQo
+
+To do so, I am signing this object:
+
+{
+    &quot;body&quot;: {
+        &quot;key&quot;: {
+            &quot;eldest_kid&quot;: &quot;01201ebcea6fb8cc7312f7c211924785f99501e1dd9aa6daef85ba0e498fd131e5ad0a&quot;,
+            &quot;host&quot;: &quot;keybase.io&quot;,
+            &quot;kid&quot;: &quot;01201ebcea6fb8cc7312f7c211924785f99501e1dd9aa6daef85ba0e498fd131e5ad0a&quot;,
+            &quot;uid&quot;: &quot;246c5b4a8b5fb8d615e076472e9c8019&quot;,
+            &quot;username&quot;: &quot;tao_oat&quot;
+        },
+        &quot;merkle_root&quot;: {
+            &quot;ctime&quot;: 1500656078,
+            &quot;hash&quot;: &quot;48a59c23f87f81c7936a6ba56054094f0b1bdc701f9a442b82e72bff8abb0e3c265a184211db5a0396a4f57618cf3ad07a83593b0f410a5060276c2b5b0234f9&quot;,
+            &quot;hash_meta&quot;: &quot;c7085acd09844727de42ef1054b8c52e2dc5e5bf6d5586c8e4c9c9961f071594&quot;,
+            &quot;seqno&quot;: 1269424
+        },
+        &quot;service&quot;: {
+            &quot;hostname&quot;: &quot;btao.org&quot;,
+            &quot;protocol&quot;: &quot;https:&quot;
+        },
+        &quot;type&quot;: &quot;web_service_binding&quot;,
+        &quot;version&quot;: 1
+    },
+    &quot;client&quot;: {
+        &quot;name&quot;: &quot;keybase.io go client&quot;,
+        &quot;version&quot;: &quot;1.0.25&quot;
+    },
+    &quot;ctime&quot;: 1500656147,
+    &quot;expire_in&quot;: 504576000,
+    &quot;prev&quot;: &quot;f18908ce750d7b7c1be6f1831b1500ee9f18db8296b77c8ca70d0c1e840b9ee8&quot;,
+    &quot;seqno&quot;: 39,
+    &quot;tag&quot;: &quot;signature&quot;
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgHrzqb7jMcxL3whGSR4X5lQHh3Zqm2u+Fug5Jj9Ex5a0Kp3BheWxvYWTFA0B7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMWViY2VhNmZiOGNjNzMxMmY3YzIxMTkyNDc4NWY5OTUwMWUxZGQ5YWE2ZGFlZjg1YmEwZTQ5OGZkMTMxZTVhZDBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMWViY2VhNmZiOGNjNzMxMmY3YzIxMTkyNDc4NWY5OTUwMWUxZGQ5YWE2ZGFlZjg1YmEwZTQ5OGZkMTMxZTVhZDBhIiwidWlkIjoiMjQ2YzViNGE4YjVmYjhkNjE1ZTA3NjQ3MmU5YzgwMTkiLCJ1c2VybmFtZSI6InRhb19vYXQifSwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE1MDA2NTYwNzgsImhhc2giOiI0OGE1OWMyM2Y4N2Y4MWM3OTM2YTZiYTU2MDU0MDk0ZjBiMWJkYzcwMWY5YTQ0MmI4MmU3MmJmZjhhYmIwZTNjMjY1YTE4NDIxMWRiNWEwMzk2YTRmNTc2MThjZjNhZDA3YTgzNTkzYjBmNDEwYTUwNjAyNzZjMmI1YjAyMzRmOSIsImhhc2hfbWV0YSI6ImM3MDg1YWNkMDk4NDQ3MjdkZTQyZWYxMDU0YjhjNTJlMmRjNWU1YmY2ZDU1ODZjOGU0YzljOTk2MWYwNzE1OTQiLCJzZXFubyI6MTI2OTQyNH0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJidGFvLm9yZyIsInByb3RvY29sIjoiaHR0cHM6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjI1In0sImN0aW1lIjoxNTAwNjU2MTQ3LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwicHJldiI6ImYxODkwOGNlNzUwZDdiN2MxYmU2ZjE4MzFiMTUwMGVlOWYxOGRiODI5NmI3N2M4Y2E3MGQwYzFlODQwYjllZTgiLCJzZXFubyI6MzksInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RA1LFRH3Hrvy/fhQErqUw2/lVKK1FzavRLSV/sL6wL+9334zJPfcOMor5dFqTorS8JlBlZpFdZlq0YvTGFdyLKC6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIEy5RKT0QxyWSlu5k6q6GqJxYZpPAcsEjvOL6TkbP/6Zo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/tao_oat
+
