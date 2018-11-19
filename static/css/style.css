@@ -1,10 +1,15 @@
 #main {
+  font-size: 1.3em;
   font-family: monospace;
-  font-size: 14px;
   line-height: 1.4;
   margin: 25px auto;
-  max-width: 600px;
+  max-width: 650px;
   padding: 0;
+}
+.body-text {
+  text-align: left;
+  font-family: 'Helvetica Neue',Helvetica,sans-serif;
+  font-size: .8em;
 }
 em {
   background: yellow;
@@ -79,8 +84,49 @@ code {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  margin-left: 2em;
+  padding: 0 2em;
 }
-.book-description {
-  text-align: left;
+.project-box {
+  margin: 2em 0;
+}
+.project-header {
+  display: flex;
+}
+.project-image img {
+  max-height: 15em;
+  max-width: 15em;
+}
+.project-image-wide {
+  width: 100%;
+}
+.project-image-wide img {
+  width: 100%;
+}
+.project-links {
+  padding: 0;
+}
+.project-links li {
+  list-style-type: none;
+  display: inline;
+}
+.project-links a {
+  text-decoration: none;
+}
+.project-links li:before {
+  content: " | ";
+}
+.project-links li:first-child:before {
+  content: none;
+}
+.material-icons, .project-links a {
+  display: inline-block;
+  vertical-align: bottom;
+}
+.project-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #efefef;
 }
