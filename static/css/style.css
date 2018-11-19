@@ -2,8 +2,8 @@
   font-family: monospace;
   font-size: 14px;
   line-height: 1.4;
-  margin: 25px;
-  max-width: 500px;
+  margin: 25px auto;
+  max-width: 600px;
   padding: 0;
 }
 em {
@@ -55,4 +55,32 @@ hr {
 }
 code {
   background-color: #DCDCDC;
+}
+.book-box {
+  margin: 2em 0;
+  display: flex;
+}
+.book-cover {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.book-cover img {
+  max-width: 15em;
+}
+.book-title h3 {
+  margin-bottom: 0;
+}
+.book-author {
+  color: grey;
+}
+.book-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-left: 2em;
+}
+.book-description {
+  text-align: left;
 }
