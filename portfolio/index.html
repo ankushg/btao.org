@@ -3,7 +3,7 @@ layout: page
 title: "Portfolio"
 ---
 
-{% assign projects = site.projects | sort: 'date' %}
+{% assign projects = site.projects | sort: 'importance' %}
 {% for project in projects reversed %}
   <div class="project-box">
     {% if project.wide %}
