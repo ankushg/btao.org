@@ -58,6 +58,9 @@ hr {
 #post-title h3, #post-title h4 {
   margin: 0.2em auto;
 }
+.post {
+  float: left;
+}
 code {
   background-color: #DCDCDC;
 }
