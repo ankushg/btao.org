@@ -3,20 +3,20 @@ layout: layout
 ---
 
 {% include header.html %}
-{% include page-navbar.html %}
+{% include navbar.html %}
 
 <hr />
 
-<div class="blog-post">
-  <div id="blog-post-title" class="centertext">
-    <h3>
+<div>
+  <div>
+    <h1 class="f2 lh-title mb0">
       <strong>{{ page.title }}</strong>
-    </h3>
-    <h4>
+    </h1>
+    <h4 class="f5 mt1">
     {{ page.date | date: "%B %e, %Y" }}
     </h4>
   </div>
-  <div class="blog-post-content body-text">
+  <div class="lh-copy sans-serif">
     {{ content }}
   </div>
 </div>

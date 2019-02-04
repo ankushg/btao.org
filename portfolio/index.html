@@ -5,42 +5,7 @@ title: "Portfolio"
 
 {% assign projects = site.projects | sort: 'importance' %}
 {% for project in projects reversed %}
-  <div class="project-box">
-    {% if project.wide %}
-    <div class="project-header-wide">
-    {% else %}
-    <div class="project-header">
-    {% endif %}
-      {% if project.image %}
-        {% if project.wide %}
-        <div class="project-image-wide">
-        {% else %}
-        <div class="project-image">
-        {% endif %}
-          <img src="{{ project.image }}" />
-        </div>
-      {% endif %}
-      <div class="project-title">
-        <h3>{{ project.title }}</h3>
-        {{ project.subtitle }}
-        <ul class="project-links">
-          {% if project.github %}
-          <li>
-            <a target="_blank" href="{{ project.github }}"><i class="material-icons">code</i><span> GitHub</span></a>
-          </li>
-          {% endif %}
-          {% if project.link %}
-            <li>
-              <a target="_blank" href="{{ project.link }}"><i class="material-icons">link</i><span> Link</span></a>
-            </li>
-          {% endif %}
-        </ul>
-      </div>
-    </div>
-    <div class="project-description body-text">
-      {{ project.content}}
-    </div>
-  </div>
+  {% include project.html wide=project.wide image=project.image title=project.title subtitle=project.subtitle github=project.github link=project.link content=project.content %}
   {% if forloop.last == false %}
     <hr />
   {% endif %}

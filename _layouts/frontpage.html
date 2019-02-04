@@ -1,23 +1,25 @@
 {% include header.html %}
 
-<div id="header" class="centertext">
-  <img id="profile-img" alt="profile picture" src="/static/img/profile.jpg"></img><br />
-  <p id="description">{{ description }}</p>{{ content }}
-  {% include frontpage-navbar.html %}
-</div>
+<header class="pv4 tc">
+  <img class="br-100 h5 w5" alt="profile picture" src="/static/img/profile.jpg"></img><br />
+  <div class="pa4 tc">
+    <p>{{ description }}</p>{{ content }}
+  </div>
+  {% include navbar.html %}
+</header>
 
-<div class="centertext">
-  <h2>Log</h2>
+<div>
+  <h2 class="lh-title f3">Log</h2>
   {% for post in paginator.posts %}
     {% unless post.hidden %}
-      <div class="post">
-        <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span> - 
-        <b class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></b>
+      <div>
+        <span>{{ post.date | date: "%Y-%m-%d" }}</span> - 
+        <a class="link dim" href="{{ post.url }}">{{ post.title }}</a>
       </div>
     {% endunless %}
   {% endfor %}
 
-  <div class="pagination">
+  <div>
     {% if paginator.next_page %}
       <a href="{{ site.baseurl }}page{{ paginator.next_page }}">Older</a>
     {% endif %}

@@ -7,20 +7,5 @@ These are some of the recent books I've read and enjoyed.
 
 {% assign books = site.books | sort: 'date' %}
 {% for book in books reversed %}
-  <div class="book-box">
-    <div class="book-cover">
-        <img alt="{{ book.title }} cover" src="{{ book.cover }}" />
-    </div>
-    <div class="book-details">
-      <div class="book-title">
-        <h3>{{ book.title }}</h3>
-      </div>
-      <div class="book-author">
-        {{ book.author }}
-      </div>
-      <div class="book-description">
-        {{ book.content }}
-      </div>
-    </div>
-  </div>
+  {% include book.html title=book.title cover=book.cover content=book.content %}
 {% endfor %}
