@@ -1,9 +1,9 @@
 {% include header.html %}
 
 <header class="pv4 tc">
-  <img class="br-100 h5 w5" alt="profile picture" src="/static/img/profile.jpg"></img><br />
-  <div class="pa4 tc">
-    <p>{{ description }}</p>{{ content }}
+  <img class="br-100 h5 w5" alt="profile picture" src="/static/img/profile.png"></img><br />
+  <div class="pa3 ph5 tc inter">
+    {{ content }}
   </div>
   {% include navbar.html %}
 </header>
@@ -14,7 +14,7 @@
     {% unless post.hidden %}
       <div>
         <span>{{ post.date | date: "%Y-%m-%d" }}</span> - 
-        <a class="link dim" href="{{ post.url }}">{{ post.title }}</a>
+        <span class="inter"><a class="link" href="{{ post.url }}">{{ post.title }}</a></span>
       </div>
     {% endunless %}
   {% endfor %}

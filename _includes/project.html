@@ -10,26 +10,28 @@
       <img class="" src="{{ include.image }}" />
       </div>
     {% endif %}
-    <div class="bg-washed-red pa2-ns pa1 flex flex-column justify-center">
-      <div class="tc">
-        <h3 class="f4 lh-title mb1">{{ include.title }}</h3>
-        <h5 class="f5 mt0 normal mb0">{{ include.subtitle }}</h5>
+    <div class="bg-washed-red pa2-ns pa1 flex flex-grow-1 justify-center">
+      <div class="flex flex-column justify-center">
+        <div class="tc">
+          <h3 class="f4 lh-title mb1">{{ include.title }}</h3>
+          <h5 class="f5 mt0 normal mb0">{{ include.subtitle }}</h5>
+        </div>
+        <ul class="list center pa0 tc">
+          {% if include.github %}
+            <li class="cf dib mr3">
+              <a class="link" target="_blank" href="{{ include.github }}"><i class="material-icons">code</i><span> GitHub</span></a>
+            </li>
+          {% endif %}
+          {% if include.link %}
+            <li class="cf dib">
+              <a class="link" target="_blank" href="{{ include.link }}"><i class="material-icons">link</i><span> Link</span></a>
+            </li>
+          {% endif %}
+        </ul>
       </div>
-      <ul class="list center pa0 tc">
-        {% if include.github %}
-          <li class="cf dib mr3">
-            <a class="link" target="_blank" href="{{ include.github }}"><i class="material-icons">code</i><span> GitHub</span></a>
-          </li>
-        {% endif %}
-        {% if include.link %}
-          <li class="cf dib">
-            <a class="link" target="_blank" href="{{ include.link }}"><i class="material-icons">link</i><span> Link</span></a>
-          </li>
-        {% endif %}
-      </ul>
     </div>
   </div>
-  <div class="lh-copy sans-serif">
+  <div class="lh-copy inter">
     {{ include.content}}
   </div>
 </div>
