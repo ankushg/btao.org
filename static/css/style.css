@@ -28,7 +28,6 @@ h1, h2, h3, h4, h5, .inter {
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'Inter';
   font-style:  normal;
@@ -43,7 +42,6 @@ h1, h2, h3, h4, h5, .inter {
   src: url("/static/fonts/Inter-ThinItalic.woff2") format("woff2"),
        url("/static/fonts/Inter-ThinItalic.woff") format("woff");
 }
-
 @font-face {
   font-family: 'Inter';
   font-style:  normal;
@@ -58,7 +56,6 @@ h1, h2, h3, h4, h5, .inter {
   src: url("/static/fonts/Inter-ExtraLightItalic.woff2") format("woff2"),
        url("/static/fonts/Inter-ExtraLightItalic.woff") format("woff");
 }
-
 @font-face {
   font-family: 'Inter';
   font-style:  normal;
@@ -73,7 +70,6 @@ h1, h2, h3, h4, h5, .inter {
   src: url("/static/fonts/Inter-LightItalic.woff2") format("woff2"),
        url("/static/fonts/Inter-LightItalic.woff") format("woff");
 }
-
 @font-face {
   font-family: 'Inter';
   font-style:  normal;
@@ -88,7 +84,6 @@ h1, h2, h3, h4, h5, .inter {
   src: url("/static/fonts/Inter-Italic.woff2") format("woff2"),
        url("/static/fonts/Inter-Italic.woff") format("woff");
 }
-
 @font-face {
   font-family: 'Inter';
   font-style:  normal;
@@ -103,7 +98,6 @@ h1, h2, h3, h4, h5, .inter {
   src: url("/static/fonts/Inter-MediumItalic.woff2") format("woff2"),
        url("/static/fonts/Inter-MediumItalic.woff") format("woff");
 }
-
 @font-face {
   font-family: 'Inter';
   font-style:  normal;
@@ -118,7 +112,6 @@ h1, h2, h3, h4, h5, .inter {
   src: url("/static/fonts/Inter-SemiBoldItalic.woff2") format("woff2"),
        url("/static/fonts/Inter-SemiBoldItalic.woff") format("woff");
 }
-
 @font-face {
   font-family: 'Inter';
   font-style:  normal;
@@ -133,7 +126,6 @@ h1, h2, h3, h4, h5, .inter {
   src: url("/static/fonts/Inter-BoldItalic.woff2") format("woff2"),
        url("/static/fonts/Inter-BoldItalic.woff") format("woff");
 }
-
 @font-face {
   font-family: 'Inter';
   font-style:  normal;
@@ -148,7 +140,6 @@ h1, h2, h3, h4, h5, .inter {
   src: url("/static/fonts/Inter-ExtraBoldItalic.woff2") format("woff2"),
        url("/static/fonts/Inter-ExtraBoldItalic.woff") format("woff");
 }
-
 @font-face {
   font-family: 'Inter';
   font-style:  normal;
@@ -162,4 +153,40 @@ h1, h2, h3, h4, h5, .inter {
   font-weight: 900;
   src: url("/static/fonts/Inter-BlackItalic.woff2") format("woff2"),
        url("/static/fonts/Inter-BlackItalic.woff") format("woff");
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/static/fonts/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(/static/fonts/MaterialIcons-Regular.woff2) format('woff2'),
+    url(/static/fonts/MaterialIcons-Regular.woff) format('woff'),
+    url(/static/fonts/MaterialIcons-Regular.ttf) format('truetype');
 }
