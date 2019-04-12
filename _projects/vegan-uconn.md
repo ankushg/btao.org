@@ -2,7 +2,7 @@
 title: Vegan UConn
 subtitle: An easy way to find vegan options at the dining halls and cafés at the University of Connecticut.
 image: /static/img/vegan-uconn-logo.png
-github: https://github.com/brortao/vegan-uconn
+code: https://gitlab.com/taobojlen/vegan-uconn
 date: 2015-12-29
 importance: 4
 ---

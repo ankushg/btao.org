@@ -1,7 +1,7 @@
 ---
 title: Death Quotes
 subtitle: An Amazon Echo skill that gives you a quote about death.
-github: https://github.com/brortao/alexa-death-quotes
+code: https://gitlab.com/taobojlen/alexa-death-quotes
 link: https://www.amazon.com/Tao-Bojl%C3%A9n-Death-Quotes/dp/B073VYLRL7/
 date: 2017-07-11
 importance: 6

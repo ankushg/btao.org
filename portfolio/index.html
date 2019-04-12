@@ -5,7 +5,7 @@ title: "Portfolio"
 
 {% assign projects = site.projects | sort: 'importance' %}
 {% for project in projects reversed %}
-  {% include project.html wide=project.wide image=project.image title=project.title subtitle=project.subtitle github=project.github link=project.link content=project.content %}
+  {% include project.html wide=project.wide image=project.image title=project.title subtitle=project.subtitle code=project.code link=project.link content=project.content %}
   {% if forloop.last == false %}
     <hr />
   {% endif %}

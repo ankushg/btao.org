@@ -3,10 +3,10 @@ title: fediverse.space
 subtitle: A tool to visualize decentralized social networks.
 image: /static/img/fediverse-space-header.png
 wide: true
-github: https://github.com/brortao/fediverse.space
+code: https://gitlab.com/taobojlen/fediverse.space 
 link: https://fediverse.space
 date: 2018-09-05
-importance: 8
+importance: 10
 ---
 
 The “fediverse” is a term used to describe the set of social media servers implementing the decentralized ActivityPub protocol. There are many implementations, the most famous being Mastodon, and these can all communicate with each other. Together, these servers are creating a libre, decentralized, and more democratic alternative to social networks like Twitter.
