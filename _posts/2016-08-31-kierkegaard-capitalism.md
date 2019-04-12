@@ -1,11 +1,8 @@
 ---
 layout: post
 title: "Self and Lack Thereof: On Kierkegaard and Capitalism"
-date: 2018-11-28
-hidden: true
+date: 2016-08-31
 ---
-
-<i>This essay was originally written in 2016.</i>
 
 In the age of social media, identity is becoming increasingly fluid and fragmented: with greater access to information comes more exposure to new perspectives and personalities, and for every side of our selves, there is a channel to express it and an audience at the ready. This explosion of identities fits neatly into the logic of consumer capitalism: more identities means more markets. Thus, identity fluidity – a concept that has liberatory potential – ends up reinforcing existing capitalist structures. Søren Kierkegaard, as one of the early experts on identity, presents a useful lens to explore this contradiction.
 

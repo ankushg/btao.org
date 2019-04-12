@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Why use elastic nets?"
-hidden: true
 ---
 
 The elastic net is a regularization method that tries to overcome some of the
