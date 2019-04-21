@@ -21,8 +21,6 @@ baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://btao.org"
 
 collections:
-  books:
-    output: true
   projects:
     output: true
 
