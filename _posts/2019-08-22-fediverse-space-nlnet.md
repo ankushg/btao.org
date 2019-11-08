@@ -21,12 +21,12 @@ discovery:
 >  Search and discovery are basic human needs for humans of all ages, and we
 >  would like to put powerful new technology in the hands of future generations
 >  as building blocks for a fair and democratic society and an open economy
->  that benefits all.<i>
+>  that benefits all.</i>
 
 Thanks to this funding, I have been able to spend this summer bringing
 fediverse.space to its full potential. The initial proof-of-concept has been
 rewritten to be far more reliable, performant, and extendable. In addition, it
 now supports far more of the server implementations seen across the fediverse.
 There's still more to come -- [follow the project on
-Mastodon](https://x0r.be/@fediversespace) to stay up-to-date!
+Mastodon](https://mastodon.social/@fediversespace) to stay up-to-date!
 
