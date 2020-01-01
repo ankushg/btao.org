@@ -8,26 +8,30 @@
   {% include navbar.html %}
 </header>
 
-<div>
+<div class="inter">
   <span class="db mb2"><h2 class="lh-title v-mid f3 di mb2">Log</h2> <a href="/feed.xml"><i class="material-icons v-mid">rss_feed</i></a></span>
   {% for post in paginator.posts %}
     {% unless post.hidden %}
-      <div>
-        <span>{{ post.date | date: "%Y-%m-%d" }}</span> - 
-        <span class="inter"><a class="link" href="{{ post.url }}">{{ post.title }}</a></span>
+       <div>
+        <h3>
+          <a class="link" href="{{ post.url }}">{{ post.date | date: "%Y-%m-%d" }} - {{ post.title }}</a>
+        </h3>
+        {% if post.excerpt %}
+          {{ post.excerpt }}
+        {% endif %}
       </div>
     {% endunless %}
   {% endfor %}
 
-  <div>
+  <div class="mt2 mb4">
     {% if paginator.next_page %}
-      <a href="{{ site.baseurl }}page{{ paginator.next_page }}">Older</a>
+      <a href="{{ site.baseurl }}page/{{ paginator.next_page }}"><< Older</a>
     {% endif %}
     {% if paginator.previous_page %}
       {% if paginator.page == 2 %}
-        <a href="{{ site.baseurl }}">Newer</a>
+      <a href="{{ site.baseurl }}">Newer >></a>
       {% else %}
-        <a href="{{ site.baseurl }}page{{ paginator.previous_page }}">Newer</a>
+      <a href="{{ site.baseurl }}page/{{ paginator.previous_page }}">Newer >></a>
       {% endif %}
     {% endif %}
   </div>

@@ -6,6 +6,8 @@ date: 2017-07-07
 
 This is my dissertation for my bachelor's degree in Cognitive Science.
 
+<!--more-->
+
 Abstract:
 
 > Head motion plays an important nonverbal role in face-to-face communication. In

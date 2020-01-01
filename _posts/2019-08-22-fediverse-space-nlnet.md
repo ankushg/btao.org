@@ -9,6 +9,8 @@ of the fediverse. The fediverse, or "federated universe", is the set of social
 media servers, hosted by individuals across the globe, forming a libre and more
 democratic alternative to traditional social media.
 
+<!--more-->
+
 I'm proud to say that this project was recently awarded a grant from the [NGI
 Zero Discovery](https://nlnet.nl/discovery) project. NGI Zero Discovery, funded
 by the European Commission, works towards creating an open, trustworthy, and
