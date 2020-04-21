@@ -1,7 +1,9 @@
 <nav class="pa1 pa2-ns tc dark-gray">
-    {% if page.url != "/" %}
-    <span class="bg-washed-red">{% include navbar-item.html href="/" title="Tao" %}</span> |
-    {% endif %}
-    {% include navbar-item.html href="/portfolio/" title="Portfolio" %} |
-    {% include navbar-item.html href="/contact/" title="Contact" %}
+  {% if page.url != "/" %}
+    <span class="bg-washed-red">{% include navbar-item.html href="/" title="Tao Bojlén" %}</span>
+    |
+  {% endif %}
+  {% include navbar-item.html href="/portfolio/" title="Portfolio" %}
+  |
+  {% include navbar-item.html href="/contact/" title="Contact" %}
 </nav>
