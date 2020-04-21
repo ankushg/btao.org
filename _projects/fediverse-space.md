@@ -1,7 +1,7 @@
 ---
 title: fediverse.space
 subtitle: A tool to visualize decentralized social networks.
-image: /static/img/fediverse-space-header.png
+image: /static/img/fediverse-space-header.webp
 wide: true
 code: https://gitlab.com/fediverse.space/fediverse.space
 link: https://www.fediverse.space

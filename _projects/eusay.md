@@ -1,7 +1,7 @@
 ---
 title: eusay
 subtitle: An online democracy platform for student unions.
-image: /static/img/eusay-logo.jpg
+image: /static/img/eusay-logo.webp
 code: https://github.com/HughMcGrade/eusay
 date: 2014-11-01
 importance: 8
