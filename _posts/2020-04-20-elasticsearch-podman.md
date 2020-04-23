@@ -12,7 +12,7 @@ Surprisingly painful.
 <br /><br /><br />
 So you just updated to Fedora 32, sat down to work, and realized that Docker wasn't working. Maybe at this point you vaguely remembered hearing about something called CgroupsV2 being a thing in Fedora 32, and maybe also something about Docker [not playing nice with CgroupsV2](https://github.com/docker/cli/issues/2104). You kick yourself for a moment but decide that this is a good opportunity to get to grips with [Podman](https://podman.io/). You could just turn off CgroupsV2 but it seems like working with Podman might make your future Fedora life a bit simpler.
 
-Podman is only a quick `dnf install` away, so you try the relatively straightforward command to run a container: `podman run --expose 9200 elasticsearch:6.8.8`. It looks like it might even work, until...
+Podman is only a quick `dnf install` away, so you try the relatively straightforward command to run a container: `podman run -p "9200:9200" elasticsearch:6.8.8`. It looks like it might even work, until...
 ```
 using discovery type [zen] and host providers [settings]
 initialized
@@ -67,7 +67,7 @@ $ ulimit -Sn
 
 You excitedly start the ElasticSearch container again, but `max file descriptors [1024] for elasticsearch process is too low, increase to at least [65535]` rears its ugly head once again. A final search tells you that you have to run
 ```
-podman run --ulimit=host --expose 9200 elasticsearch:6.8.8
+podman run --ulimit=host -p "9200:9200" elasticsearch:6.8.8
 ```
 You have never been this relieved to see an ElasticSearch container start up.
 
@@ -83,4 +83,4 @@ tao soft nofile 65535
 tao hard nofile 131070
 ```
 
-Reboot. Then you can run `podman run --ulimit=host --expose 9200 elasticsearch:6.8.8`.
+Reboot. Then you can run `podman run --ulimit=host -p "9200:9200" elasticsearch:6.8.8`.
