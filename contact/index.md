@@ -5,5 +5,5 @@ title: "Get in touch"
 
 My email is my first name followed by "@btao.org".
 
-My GPG public key is on [Keybase](https://keybase.io/taooat), where you can also send me an encrypted message.
+If you want a secure channel, email me and ask for my Signal number. [I'm trying to quit PGP](https://blog.cryptographyengineering.com/2014/08/13/whats-matter-with-pgp/).
 
