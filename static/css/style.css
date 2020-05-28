@@ -16,6 +16,15 @@ h1, h2, h3, h4, h5, .inter {
     font-family: "Inter", sans-serif;
 }
 
+.post-body img {
+  margin: 1em auto;
+  display: block;
+}
+
+a.footnote {
+  margin-left: 0.2em;
+}
+
 /** Fonts **/
 @font-face {
   font-family: 'LabMono-Regular';
