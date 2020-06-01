@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Feel-good security in ProtonMail"
-date: 2020-05-29
+date: 2020-06-01
 ---
 
-ProtonMail is one of the most popular security-focused email providers. Because email is not a particularly secure protocol, things like end-to-end encryption are always bolted on top. To ensure interoperatiblity, an email provider must be able to send unencrypted messages to recipients who haven't dived into the painful world of PGP.
+ProtonMail is one of the most popular security-focused email providers. Because email is not a particularly secure protocol, things like end-to-end encryption have to be bolted on top. To ensure interoperatiblity, an email provider must be able to send unencrypted messages to recipients who haven't dived into the painful world of PGP.
 
 <!--more-->
 
@@ -22,7 +22,7 @@ Unless you're familar with the technical details of how email and encryption wor
 
 It's in no way clear from the UI, but the first padlock icon (grey) means that the email was sent in plaintext. It's stored encrypted on ProtonMail's side, but the sender's email provider has full access to the email. The second padlock icon (greyish purple) means that the email was *actually* end-to-end encrypted. As a user, you'll learn this if you hover over the padlock, but the key gotchas are not mentioned anywhere.
 
-ProtonMail does actually the ability to send encrypted emails to other providers if you set a symmetric encryption key. You just have to notice the button with a lock on it and know that you have to manually set it up. Of course, if all you've read is ProtonMail's marketing materials and their UI, you probably won't know that this is even necessary.
+ProtonMail does actually provide the ability to send encrypted emails to other providers if you set a symmetric encryption key. You just have to notice the button with a lock on it and know that you have to manually set it up. Of course, if all you've read is ProtonMail's marketing materials and their UI, you probably won't know that this is necessary to get the advertised security.
 
 ![The "send email" toolbar showing a button with a padlock on it](/static/img/protonmail-send-encryption.png)
 
