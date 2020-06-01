@@ -7,9 +7,23 @@ html {
 a {
     color: black;
 }
-
 a:hover {
     background-color: #ffdfdf;
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: #171717 !important;
+    color: #eaeaea !important;
+  }
+  a, a:visited {
+    color: #eaeaea !important;
+  }
+  a:hover {
+    background-color: rgb(119, 0, 0) !important;
+  }
+  .bg-washed-red {
+    background-color: rgb(119, 0, 0) !important;
+  }
 }
 
 h1, h2, h3, h4, h5, .inter {
