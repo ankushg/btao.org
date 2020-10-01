@@ -1,5 +1,6 @@
 title: Tao Bojlén
 baseurl: "/" # the subpath of your site, e.g. /blog
+description: Tao Bojlén's blog and portfolio.
 url: "https://www.btao.org"
 
 collections:
