@@ -4,6 +4,7 @@ title: "Running ElasticSearch in podman on Fedora 32"
 date: 2020-04-20
 ---
 <a href="#tldr">Jump the to the tl;dr.</a>
+
 So you just updated to Fedora 32, sat down to work, and realized that Docker wasn't working. Maybe at this point you vaguely remembered hearing about something called CgroupsV2 being a thing in Fedora 32, and maybe also something about Docker [not playing nice with CgroupsV2](https://github.com/docker/cli/issues/2104). You kick yourself for a moment but decide that this is a good opportunity to get to grips with [Podman](https://podman.io/). You could just turn off CgroupsV2 but it seems like working with Podman might make your future Fedora life a bit simpler.
 
 Podman is only a quick `dnf install` away, so you try the relatively straightforward command to run a container: `podman run -p "9200:9200" elasticsearch:6.8.8`. It looks like it might even work, until...
