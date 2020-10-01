@@ -11,7 +11,7 @@ collections:
 header_pages:
   - index.md
   - portfolio.html
-  - contact.md
+  - contact.html
 style: dark
 listen_for_clients_preferred_style: false
 
