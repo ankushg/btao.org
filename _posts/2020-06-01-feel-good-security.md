@@ -6,8 +6,6 @@ date: 2020-06-01
 
 ProtonMail is one of the most popular security-focused email providers. Because email is not a particularly secure protocol, things like end-to-end encryption have to be bolted on top. To ensure interoperatiblity, an email provider must be able to send unencrypted messages to recipients who haven't dived into the painful world of PGP.
 
-<!--more-->
-
 ProtonMail handles this quite well. Emails are stored encrypted on their servers, and are only decrypted in the client -- this way, ProtonMail isn't able to read any of your stored emails. When sending emails to other ProtonMail users, end-to-end encryption is handled transparently. But there's an important gotcha: in order to send and receive emails from other providers, ProtonMail has to handle the plaintext. Otherwise, the recipient (e.g. on an @gmail.com address) would receive a garbled mess that they had no idea how to decipher. Thus, ProtonMail could theoretically intercept your emails as they enter or leave their servers.
 
 This isn't a problem with ProtonMail's technology; it's a problem with email. Fundamentally, the protocol wasn't built for end-to-end encryption. However, while ProtonMail's handling of this challenge is reasonable, the way they communicate it isn't. Take this text on their front page:

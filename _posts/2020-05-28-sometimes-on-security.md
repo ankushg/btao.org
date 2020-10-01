@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Sometimes-on security: on mixing plaintext and encrypted messages"
+title: "On mixing plaintext and encrypted messages"
 date: 2020-05-28
 ---
 
@@ -8,8 +8,6 @@ Several security-focused messaging apps give users the ability to choose
 between two modes: unencrypted chats, or end-to-end encrypted ones that might
 lack certain features. This is an anti-pattern when it comes to usable
 security, and it brings some risks that are rarely discussed.
-
-<!--more-->
 
 There are several different implementations of this mixing and matching of
 secure and insecure communications. Some chat apps default to unencrypted

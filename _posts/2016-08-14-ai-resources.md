@@ -5,7 +5,7 @@ date: 2016-08-14
 ---
 
 This is a collection of resources on various AI topics (mostly ML). There's a
-lot here - it's mostly for reference! <!--more-->
+lot here - it's mostly for reference!
 
 ## Papers
 * [Facebook Research](https://research.facebook.com/publications/)

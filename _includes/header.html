@@ -1,16 +1,16 @@
-<html>
-<head>
-  <title>{{ site.title }} | {{ page.title }}</title>
-  <meta charset="utf-8">
-  <meta name="description" content="{{ site.description }}" />
-  <meta name="author" content="{{ site.title }}" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css"  href="/static/css/tachyons.min.css">
-  <link rel="stylesheet" type="text/css"  href="/static/css/style.css">
-  <link rel="stylesheet" type="text/css"  href="/static/css/monokai.css">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
-</head>
-<body>
-  <div class="center mw7 ph3-ns ph2">
+{%- assign page_paths = site.header_pages | default: default_paths -%}
+<header>
+  <div class="menu">
+    <div class="menu-title">
+      <a href="/">{{ site.title }}</a>
+    </div>
+    <ul>
+      {%- for path in page_paths -%}
+        {%- assign my_page = site.pages | where: "path", path | first -%}
+        {%- if my_page.title -%}
+        <li><a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
+        {%- endif -%}
+      {%- endfor -%}
+    </ul>
+  </div>
+</header>

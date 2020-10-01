@@ -4,11 +4,7 @@ title: "Literature review: Routing attacks on Tor"
 date: 2020-08-12
 ---
 
-Routing attacks on Tor occur when an adversary attempts to influence the route a Tor circuit takes in order to improve their chances of intercepting traffic.
-
-<!--more-->
-
-In January of this year, I wrote a literature review on this topic that I'm sharing here: [PDF link](/static/routing-attacks-against-tor.pdf).
+Routing attacks on Tor occur when an adversary attempts to influence the route a Tor circuit takes in order to improve their chances of intercepting traffic. In January of this year, I wrote a literature review on this topic that I'm sharing here: [PDF link](/static/routing-attacks-against-tor.pdf).
 
 Abstract:
 
