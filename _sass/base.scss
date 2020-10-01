@@ -13,7 +13,7 @@ $container-max-width:  700px !default;
 /**
  * Global
  */
-body { background-color: var(--background-color);  margin: 0 auto;  padding: 0;  font-family: $base-font-family;  font-size: $base-font-size;  color: var(--text-color);  text-align: left;  line-height: $base-line-height !important; }
+body { background-color: var(--background-color);  margin: 0 auto;  padding: 0;  font-family: $base-font-family;  font-size: $base-font-size;  color: var(--text-color);  text-align: left;  line-height: $base-line-height !important; }k
 code, pre {font-family: $base-font-family;}
 h1, h2, h3, h4, h5, h6 { font-size: $base-font-size;  margin: 0;  font-weight: bold;  color: var(--text-color); }
 p, ul, ol { color: var(--text-color); }
@@ -151,6 +151,7 @@ pre { background-color: var(--background-color);  border: none;  padding: 0;  ma
   font-family: 'Inconsolata';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: local(''),
        url('/static/fonts/inconsolata-v20-latin-ext_latin-regular.woff2') format('woff2'),
        url('/static/fonts/inconsolata-v20-latin-ext_latin-regular.woff') format('woff');
