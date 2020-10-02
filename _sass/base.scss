@@ -15,8 +15,10 @@ $container-max-width:  700px !default;
  */
 body { background-color: var(--background-color);  margin: 0 auto;  padding: 0;  font-family: $base-font-family;  font-size: $base-font-size;  color: var(--text-color);  text-align: left;  line-height: $base-line-height !important; }k
 code, pre {font-family: $base-font-family;}
-h1, h2, h3, h4, h5, h6 {  color: var(--text-color); }
-:not(.post) h1, h2, h3, h4, h5, h6 { font-size: $base-font-size;  margin: 0;  font-weight: bold; }
+h1, h2, h3, h4, h5, h6 {  color: var(--text-color);  margin: 0 }
+:not(.post):not(.post-title) > {
+  h1, h2, h3, h4, h5, h6 { font-size: $base-font-size;  font-weight: bold; }
+}
 p, ul, ol { color: var(--text-color); }
 a { text-decoration: underline;  color: var(--link-color); }
 a:hover { color: var(--background-color); background-color: var(--base-color); }
