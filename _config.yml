@@ -5,7 +5,7 @@ url: "https://www.btao.org"
 
 collections:
   projects:
-    output: true
+    output: false
 
 # Theme settings
 header_pages:
