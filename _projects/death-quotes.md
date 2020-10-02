@@ -8,4 +8,4 @@ importance: 6
 
 Death Quotes is an app for the Amazon Echo. Upon receiving a request like “Alexa, ask Death Quotes to tell me about death,” Alexa will read a random quote on the subject of our mortality.
 
-Death Quotes is the first of an in-progress series of projects on our urge to deny our own mortality. Partially inspired by Ernst Becker’s book <i>The Denial of Death</i>, these projects aim to revive the Renaissance mantra of <i>memento mori</i>, but adjusted to the contemporary technology consumer.
+Partially inspired by Ernst Becker’s book <i>The Denial of Death</i>, this project aims to revive the Renaissance mantra of <i>memento mori</i>, but adjusted to the contemporary technology consumer.
