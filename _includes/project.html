@@ -1,16 +1,18 @@
 <div class="project">
-    <img src="{{ include.image }}" />
+    {% if include.image %}
+        <img src="{{ include.image }}" alt="Project logo" />
+    {% endif %}
     <h2>{{ include.title }}</h2>
     <span>{{ include.subtitle }}</span>
     <ul class="project-links">
         {% if include.code %}
         <li>
-            <a target="_blank" href="{{ include.code }}"><i class="material-icons">code</i> Code</a>
+            <a target="_blank" rel="noopener noreferrer" href="{{ include.code }}"><i class="material-icons">code</i> Code</a>
         </li>
         {% endif %}
         {% if include.link %}
         <li>
-            <a target="_blank" href="{{ include.link }}"><i class="material-icons">link</i> Link</a>
+            <a target="_blank" rel="noopener noreferrer" href="{{ include.link }}"><i class="material-icons">link</i> Link</a>
         </li>
         {% endif %}
     </ul>
