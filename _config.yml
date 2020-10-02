@@ -23,6 +23,13 @@ plugins:
   - jekyll-sitemap
   - jekyll-target-blank
 
+defaults:
+  -
+    scope:
+      path:            "_projects/*.md"
+    values:
+      sitemap:         false
+
 # Exclude from processing.
 exclude:
   - Gemfile
