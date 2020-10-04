@@ -42,3 +42,6 @@ exclude:
   - LICENSE
   - .git
   - .gitignore
+
+include:
+  - _redirects
