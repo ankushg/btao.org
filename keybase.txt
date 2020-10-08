@@ -1,0 +1,58 @@
+==================================================================
+https://keybase.io/taobojlen
+--------------------------------------------------------------------  
+
+I hereby claim:                                                                                                        
+
+  * I am an admin of https://www.btao.org
+  * I am taobojlen (https://keybase.io/taobojlen) on keybase.
+  * I have a public key ASB0g5kVZPG6x8mSbS-cUv67gLNUd4ztXbeEkMKTM2YaeQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01207483991564f1bac7c9926d2f9c52febb80b354778ced5db78490c29333661a790a",
+      "host": "keybase.io",
+      "kid": "01207483991564f1bac7c9926d2f9c52febb80b354778ced5db78490c29333661a790a",
+      "uid": "89cfbe5efa5b2224536408ca78715f19",
+      "username": "taobojlen"
+    },
+    "merkle_root": {
+      "ctime": 1602143026,
+      "hash": "bbfc4a83d687f0d6f4190db73086538c026ea3e9f9adb7aa42d84f68f8397158db558a5be5460482cbf4948c917dba76bc063310e78f7854c16fe8dac1415ac3",
+      "hash_meta": "d71c042be55edba3140d7eb24546cc091412ae1e9496d241c7788f270d53bbc1",
+      "seqno": 17775734
+    },
+    "service": {
+      "entropy": "7WNJH8K0CIEMNGo5S6GXYb75",
+      "hostname": "www.btao.org",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.5.1"
+  },
+  "ctime": 1602143073,
+  "expire_in": 504576000,
+  "prev": "4ed20712918bb77b93c88fd1cb5e5fafc258caf6878b5439ffed20d2d37645ff",
+  "seqno": 6,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgdIOZFWTxusfJkm0vnFL+u4CzVHeM7V23hJDCkzNmGnkKp3BheWxvYWTESpcCBsQgTtIHEpGLt3uTyI/Ry15fr8JYyvaHi1Q5/+0g0tN2Rf/EICjFOJ1DwEEJejmZJ8CFqMHsWCF+efs4m66ajoQvhWUMAgHCo3NpZ8RA4lAASuMk5DY93fKLW4tq5FgKzV
+EGuvRXJ/5WAeM7EaycX0vTki7Xyxnscs3SPhupKVoThTZKvYmMVnUaZoQVAKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEINmctkhXW0iqspHQq1/WNMYiJO4o+iRlQafHB5/faFr9o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/taobojlen
+
+==================================================================
+
