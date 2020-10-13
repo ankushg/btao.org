@@ -1,7 +1,7 @@
 ---
 layout: page
 title: /contact
-permalink: /contact/success
+permalink: /contact/success/
 sitemap: false
 ---
 

@@ -7,6 +7,9 @@ collections:
   projects:
     output: false
 
+# Auto-adds trailing slash
+permalink: pretty
+
 # Theme settings
 header_pages:
   - index.md
