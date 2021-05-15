@@ -5,7 +5,7 @@ image: /static/img/vegan-uconn-logo.png
 code: https://gitlab.com/tao_oat/vegan-uconn
 link: https://veganuconn.com/
 date: 2015-12-29
-importance: 4
+importance: 2
 ---
 
 I’m an advocate of animal rights and believe that veganism is the best way to put this belief into action. My preferred form of advocacy is to make veganism as accessible as possible.
