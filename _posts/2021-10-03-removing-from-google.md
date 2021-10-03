@@ -1,0 +1,25 @@
+---
+layout: post
+title: "Removing my site from Google search"
+date: 2021-10-03
+---
+
+At this point, we're slowly starting to understand the threat that [surveillance capitalism](https://www.theguardian.com/technology/2019/jan/20/shoshana-zuboff-age-of-surveillance-capitalism-google-facebook) poses to democracy and human autonomy. With your phone's operating system being run by Google, your every question answered by Google Search, and Google scripts on every website you visit, it's difficult to overstate how intimately the company knows you. This knowledge is then squeezed to extract the maximum possible profit -- not just by showing you a "relevant ad" above a search result, but by modifying your off-screen behaviour. Nudging us to consume more is only the most banal example of a process and a power that's fundamentally antithetical to individual self-determination[^1].
+
+Quoting from Shoshana Zuboff's *[The Age of Surveillance Capitalism](https://literal.club/book/the-age-of-surveillance-capitalism-u7f09)*:
+
+> …the essence of the exploitation here is the rendering of our lives as behavioral data for the sake of other’s improved control of us. The remarkable questions here concern the facts that our lives are rendered as behavioral data in the first place; that ignorance is a condition of this ubiquitous rendition; that decision rights vanish before one even knows that there is a decision to make; that there are consequences to this diminishment of rights that we can neither see nor foretell; that there is no exit, no voice, and no loyalty, only helplessness, resignation, and psychic numbing; and that encryption is the only positive action left to discuss when we sit around the dinner table and casually ponder how to hide from the forces that hide from us.
+
+Here's one more positive action: we can opt out. Perhaps not fully -- e.g. refusing to use Google Meet for a job interview won't leave a great impression -- but we can stop providing Google with the content that they depend on.
+
+I don't want to contribute to Google's monopoly on search, or their overall creepiness. Granted, this website doesn't get particularly large amounts of traffic, but if I can make Google Search a little bit less useful then it's worth doing. This meta tag will block only Google's web crawlers:
+
+```html
+<meta name="googlebot" content="noindex">
+```
+
+I've added it to this website. It'll take some time before it disappears from Google, and it's only a tiny drop in the ocean, but a tiny drop is better than none.
+
+If you'd like to join in the growing chorus of voices saying *[fuck off, Google](https://fuckoffgoogle.de/)*, I recommend [privacyguides.org](https://www.privacyguides.org/) as a starting point.
+
+[^1]: See also [social cooling](https://www.socialcooling.com/).
