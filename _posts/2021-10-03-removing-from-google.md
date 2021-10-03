@@ -23,4 +23,4 @@ I've added it to this website. It'll take some time before it disappears from Go
 If you'd like to join in the growing chorus of voices saying *[fuck off, Google](https://fuckoffgoogle.de/)*, I recommend [privacyguides.org](https://www.privacyguides.org/) as a starting point.
 
 [^1]: See also [social cooling](https://www.socialcooling.com/).
-[^2]: Google [stopped respecting robots.txt noindex](https://developers.google.com/search/blog/2019/07/a-note-on-unsupported-rules-in-robotstxt) a few years ago. This meta tag is the recommended way of hiding a site from Google.
+[^2]: Google [stopped respecting robots.txt noindex](https://developers.google.com/search/blog/2019/07/a-note-on-unsupported-rules-in-robotstxt) a few years ago. This meta tag is the recommended way of hiding a site from Google. You can still disallow Googlebot using robots.txt, but your site [might still appear in search results based on third-party links](https://developers.google.com/search/docs/advanced/robots/intro).
