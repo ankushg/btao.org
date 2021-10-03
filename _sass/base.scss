@@ -70,7 +70,7 @@ a:hover {
 }
 .post {
   font-family: "Inter", sans-serif;
-  font-size: 15px;
+  font-size: $base-font-size;
 }
 @supports (font-variation-settings: normal) {
   .post {
