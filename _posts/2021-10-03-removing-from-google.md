@@ -12,7 +12,7 @@ Quoting from Shoshana Zuboff's *[The Age of Surveillance Capitalism](https://lit
 
 Here's one more positive action: we can opt out. Perhaps not fully -- e.g. refusing to use Google Meet for a job interview won't leave a great impression -- but we can stop providing Google with the content that they depend on.
 
-I don't want to contribute to Google's monopoly on search, or their overall creepiness. Granted, this website doesn't get particularly large amounts of traffic, but if I can make Google Search a little bit less useful then it's worth doing. This meta tag will block only Google's web crawlers:
+I don't want to contribute to Google's monopoly on search, or their overall creepiness. Granted, this website doesn't get particularly large amounts of traffic, but if I can make Google Search a little bit less useful then it's worth doing. This meta tag will block only Google's web crawlers[^2]:
 
 ```html
 <meta name="googlebot" content="noindex">
@@ -23,3 +23,4 @@ I've added it to this website. It'll take some time before it disappears from Go
 If you'd like to join in the growing chorus of voices saying *[fuck off, Google](https://fuckoffgoogle.de/)*, I recommend [privacyguides.org](https://www.privacyguides.org/) as a starting point.
 
 [^1]: See also [social cooling](https://www.socialcooling.com/).
+[^2]: Google [stopped respecting robots.txt noindex](https://developers.google.com/search/blog/2019/07/a-note-on-unsupported-rules-in-robotstxt) a few years ago. This meta tag is the recommended way of hiding a site from Google.
