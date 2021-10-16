@@ -19,7 +19,6 @@ body {
   padding: 0;
   font-family: $base-font-family;
   font-size: $base-font-size;
-  font-display: swap;
   color: var(--text-color);
   text-align: left;
   line-height: $base-line-height !important;
@@ -71,7 +70,6 @@ a:hover {
 }
 .post {
   font-family: "Inter", sans-serif;
-  font-display: swap;
   font-size: $base-font-size;
 }
 @supports (font-variation-settings: normal) {
@@ -563,6 +561,7 @@ pre {
   font-family: "Inconsolata";
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: local(""),
     url("/static/fonts/inconsolata-v20-latin-regular.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
@@ -574,6 +573,7 @@ pre {
   font-family: "Inconsolata";
   font-style: normal;
   font-weight: 500;
+  font-display: swap;
   src: local(""),
     url("/static/fonts/inconsolata-v20-latin-500.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
@@ -585,6 +585,7 @@ pre {
   font-family: "Inconsolata";
   font-style: normal;
   font-weight: 600;
+  font-display: swap;
   src: local(""),
     url("/static/fonts/inconsolata-v20-latin-600.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
@@ -596,6 +597,7 @@ pre {
   font-family: "Inconsolata";
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: local(""),
     url("/static/fonts/inconsolata-v20-latin-700.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
@@ -607,6 +609,7 @@ pre {
   font-family: "Inconsolata";
   font-style: normal;
   font-weight: 900;
+  font-display: swap;
   src: local(""),
     url("/static/fonts/inconsolata-v20-latin-900.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
@@ -618,6 +621,7 @@ pre {
   font-family: "Inconsolata";
   font-style: normal;
   font-weight: 800;
+  font-display: swap;
   src: local(""),
     url("/static/fonts/inconsolata-v20-latin-800.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
