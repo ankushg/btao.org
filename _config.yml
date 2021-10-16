@@ -16,8 +16,6 @@ header_pages:
   - index.md
   - portfolio.html
   - contact.html
-style: dark
-listen_for_clients_preferred_style: false
 
 # Build settings
 kramdown:
