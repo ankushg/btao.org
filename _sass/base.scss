@@ -19,6 +19,7 @@ body {
   padding: 0;
   font-family: $base-font-family;
   font-size: $base-font-size;
+  font-display: swap;
   color: var(--text-color);
   text-align: left;
   line-height: $base-line-height !important;
@@ -70,6 +71,7 @@ a:hover {
 }
 .post {
   font-family: "Inter", sans-serif;
+  font-display: swap;
   font-size: $base-font-size;
 }
 @supports (font-variation-settings: normal) {
