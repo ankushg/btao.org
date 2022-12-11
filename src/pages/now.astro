@@ -1,0 +1,61 @@
+---
+import SimpleLayoutSection from "../components/SimpleLayoutSection.astro";
+import SimpleLayout from "../layouts/SimpleLayout.astro";
+import type { SectionItem } from "../components/SimpleLayoutSection.astro";
+
+const lastUpdated = "11 December 2022";
+const lastUpdatedLocation = "Bilbao, Spain";
+
+const work: SectionItem[] = [
+  {
+    title: "Cinder",
+    href: "https://cinder.co",
+    description:
+      "Working on trust & safety tooling is extremely rewarding and takes up most of my work efforts these days.",
+  },
+];
+const life: SectionItem[] = [
+  {
+    title: "Traveling",
+    description:
+      "After many winters in the dreary north, I'm spending the foreseeable future traveling around Europe with no fixed location. Trying to do it without flying so I'm spending lots of time on buses.",
+  },
+];
+const favorites: SectionItem[] = [
+  {
+    title: "Music",
+    href: "https://www.youtube.com/watch?v=pbrgjUhCsNQ",
+    description: "Ydegirl feat. CTM - Lovely Snipe",
+  },
+  {
+    title: "Books",
+    description: "Either/Or by Elif Batuman",
+  },
+  {
+    title: "Podcast",
+    description: "Hollywood Handbook",
+    href: "https://podcasts.apple.com/us/podcast/hollywood-handbook/id720832183",
+  },
+];
+---
+
+<SimpleLayout pageTitle="Now" title="Now">
+  <span slot="intro">
+    What I'm up to right now. This page is inspired by <a
+      href="https://sive.rs/now"
+      class="underline"
+      target="_blank"
+      rel="noopener noreferrer">Derek Sivers</a
+    > and <a
+      rel="noopener noreferrer"
+      target="_blank"
+      class="underline"
+      href="https://nownownow.com/">nownownow.com</a
+    >. Last updated on {lastUpdated} from {lastUpdatedLocation}.
+  </span>
+  <div class="space-y-20">
+    <SimpleLayoutSection title="Work" items={work} />
+    <SimpleLayoutSection title="Life" items={life} />
+    <SimpleLayoutSection title="Favs" items={favorites} />
+  </div>
+</SimpleLayout>

@@ -61,11 +61,12 @@ const projects: Project[] = [
 ];
 ---
 
-<SimpleLayout
-  pageTitle="Projects"
-  title="My favorite projects"
-  intro="I've worked on a lot of things, but these are the most interesting to me. I try to use free software licenses whenever possible, so all of these are open for contributions!"
->
+<SimpleLayout pageTitle="Projects" title="My favorite projects">
+  <span slot="intro">
+    I've worked on a lot of things, but these are the most interesting to me. I
+    try to use free software licenses whenever possible, so all of these are
+    open for contributions!
+  </span>
   <ul
     role="list"
     class="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"

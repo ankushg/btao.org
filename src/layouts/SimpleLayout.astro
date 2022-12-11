@@ -5,9 +5,8 @@ import Layout from "./Layout.astro";
 interface Props {
   pageTitle: string;
   title: string;
-  intro: string;
 }
-const { pageTitle, title, intro } = Astro.props;
+const { pageTitle, title } = Astro.props;
 ---
 
 <Layout title={pageTitle}>
@@ -19,7 +18,7 @@ const { pageTitle, title, intro } = Astro.props;
         {title}
       </h1>
       <p class="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-        {intro}
+        <slot name="intro" />
       </p>
     </header>
     <div class="mt-16 sm:mt-20">

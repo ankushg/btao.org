@@ -23,6 +23,7 @@
     "astro": "^1.6.14",
     "astro-icon": "^0.8.0",
     "date-fns": "^2.29.3",
+    "nanoid": "^4.0.0",
     "postcss-focus-visible": "^7.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

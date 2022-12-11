@@ -1,0 +1,33 @@
+---
+import Card from "./Card/Card.astro";
+import CardDescription from "./Card/CardDescription.astro";
+import CardTitle from "./Card/CardTitle.astro";
+import Section from "./Section.astro";
+
+export type SectionItem = {
+  title: string;
+  description: string;
+  href?: string;
+};
+interface Props {
+  title: string;
+  items: SectionItem[];
+}
+const { title, items } = Astro.props;
+---
+
+<Section title={title}>
+  <ul role="list" class="space-y-16">
+    <slot />
+    {
+      items.map((item) => (
+        <Card component="li">
+          <CardTitle component="h3" href={item.href}>
+            {item.title}
+          </CardTitle>
+          <CardDescription>{item.description}</CardDescription>
+        </Card>
+      ))
+    }
+  </ul>
+</Section>
