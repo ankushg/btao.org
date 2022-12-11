@@ -18,5 +18,5 @@ import prefetch from "@astrojs/prefetch";
 // https://astro.build/config
 export default defineConfig({
   site: "https://btao.org",
-  integrations: [tailwind(), react(), mdx(), sitemap(), prefetch()]
+  integrations: [tailwind(), react(), mdx(), sitemap(), prefetch()],
 });
