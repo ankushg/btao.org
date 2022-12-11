@@ -1,0 +1,19 @@
+---
+import { Icon } from "astro-icon";
+import Button from "./Button.astro";
+---
+
+<div class="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+  <h2 class="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+    <Icon pack="heroicons-outline" name="rss" class="h-6 w-6 flex-none" />
+    <span class="ml-3">Stay up to date</span>
+  </h2>
+  <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+    Subscribe to my blog in your favorite RSS reader.
+  </p>
+  <div class="mt-6 flex">
+    <Button href="/feed.xml" class="w-full" variant="secondary"
+      >Subscribe</Button
+    >
+  </div>
+</div>

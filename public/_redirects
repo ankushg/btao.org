@@ -1,0 +1,26 @@
+/js/script.js                           https://plausible.io/js/plausible.outbound-links.js 200
+/api/event                              https://plausible.io/api/event 202
+/feed                                   /feed.xml
+/rss                                    /feed.xml
+/portfolio                              /projects/
+/2016/08/31/kierkegaard-capitalism.html /articles/2016-08-31-kierkegaard-capitalism/
+/2019/08/22/fediverse-space-nlnet.html  /articles/2019-08-22-fediverse-space-nlnet/
+/2019/12/31/reading.html                /articles/2019-12-31-reading/
+/2020/04/20/elasticsearch-podman.html   /articles/2020-04-20-elasticsearch-podman/
+/2020/05/28/sometimes-on-security.html  /articles/2020-05-28-sometimes-on-security/
+/2020/06/01/feel-good-security.html     /articles/2020-06-01-feel-good-security/
+/2020/06/06/against-telegram.html       /articles/2020-06-07-against-telegram/
+/2020/08/12/routing-attacks-tor.html    /articles/2020-08-12-routing-attacks-tor/
+/2020/10/02/npm-trust.html              /articles/2020-10-02-npm-trust/
+/2016/08/31/kierkegaard-capitalism      /articles/2016-08-31-kierkegaard-capitalism/
+/2019/08/22/fediverse-space-nlnet       /articles/2019-08-22-fediverse-space-nlnet/
+/2019/12/31/reading                     /articles/2019-12-31-reading/
+/2020/04/20/elasticsearch-podman        /articles/2020-04-20-elasticsearch-podman/
+/2020/05/28/sometimes-on-security       /articles/2020-05-28-sometimes-on-security/
+/2020/06/01/feel-good-security          /articles/2020-06-01-feel-good-security/
+/2020/06/06/against-telegram            /articles/2020-06-07-against-telegram/
+/2020/08/12/routing-attacks-tor         /articles/2020-08-12-routing-attacks-tor/
+/2020/10/02/npm-trust                   /articles/2020-10-02-npm-trust/
+/2021/09/09/npm-install-is-curl-bash    /articles/2021-09-09-npm-install-is-curl-bash/
+/2021/10/03/removing-from-google        /articles/2021-10-03-removing-from-google/
+/2022/01/09/the-right-tool-for-the-job  /articles/2022-01-08-the-right-tool-for-the-job/

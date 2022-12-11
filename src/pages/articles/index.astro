@@ -1,0 +1,22 @@
+---
+import SimpleLayout from "../../layouts/SimpleLayout.astro";
+import { parseArticle, sortPosts } from "./_utils";
+import Article from "../../components/articles/Article.astro";
+
+const title = "Articles";
+const intro =
+  "Longer-form writing about software development, security, and more.";
+
+const data = await Astro.glob("../../content/articles/*.mdx");
+const allPosts = await Promise.all(data.map(parseArticle));
+---
+
+<SimpleLayout pageTitle={title} title={title} intro={intro}>
+  <div
+    class="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40"
+  >
+    <div class="flex max-w-3xl flex-col space-y-16">
+      {allPosts.sort(sortPosts).map((article) => <Article article={article} />)}
+    </div>
+  </div>
+</SimpleLayout>

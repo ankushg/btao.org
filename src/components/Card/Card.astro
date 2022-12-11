@@ -1,0 +1,11 @@
+---
+interface Props {
+  component?: string;
+  class?: string;
+}
+const { class: className, component: Component = "div" } = Astro.props;
+---
+
+<Component class:list={[className, "group relative flex flex-col items-start"]}>
+  <slot />
+</Component>

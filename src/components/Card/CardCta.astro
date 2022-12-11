@@ -1,0 +1,15 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<div
+  aria-hidden="true"
+  class="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500"
+>
+  <slot />
+  <Icon
+    pack="heroicons-solid"
+    name="chevron-right"
+    class="ml-1 h-4 w-4 text-current"
+  />
+</div>

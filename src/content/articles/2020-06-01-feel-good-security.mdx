@@ -1,0 +1,28 @@
+---
+title: "Feel-good security in ProtonMail"
+date: 2020-06-01
+---
+
+ProtonMail is one of the most popular security-focused email providers. Because email is not a particularly secure protocol, things like end-to-end encryption have to be bolted on top. To ensure interoperatiblity, an email provider must be able to send unencrypted messages to recipients who haven't dived into the painful world of PGP.
+
+ProtonMail handles this quite well. Emails are stored encrypted on their servers, and are only decrypted in the client -- this way, ProtonMail isn't able to read any of your stored emails. When sending emails to other ProtonMail users, end-to-end encryption is handled transparently. But there's an important gotcha: in order to send and receive emails from other providers, ProtonMail has to handle the plaintext. Otherwise, the recipient (e.g. on an @gmail.com address) would receive a garbled mess that they had no idea how to decipher. Thus, ProtonMail could theoretically intercept your emails as they enter or leave their servers.
+
+This isn't a problem with ProtonMail's technology; it's a problem with email. Fundamentally, the protocol wasn't built for end-to-end encryption. However, while ProtonMail's handling of this challenge is reasonable, the way they communicate it isn't. Take this text on their front page:
+
+![Screenshot from ProtonMail's front page saying "All emails are secured automatically with end-to-end encryption"](/img/protonmail-frontpage-e2e.png)
+
+If you like arguing semantics, you might want to say that this is _technically_ true. All emails _are_ secured with end-to-end encryption once they're stored on ProtonMail's server. But this leaves out the pretty important fact that, like any email provider, ProtonMail has the ability to read your emails as they are received or sent (unless the recipient is also a ProtonMail user, or unless you manually set up a secure PGP channel).
+
+Unless you're familar with the technical details of how email and encryption works, ProtonMail's UI is going to make you feel a lot more secure than you really are. Because every email is either end-to-end encrypted with PGP _or_ stored encrypted, the ProtonMail design team decided to throw little padlock indicators on everything:
+
+![Two lock indicators in Protonmail, almost identical apart from slightly different colors](/img/protonmail-locks.png)
+
+It's in no way clear from the UI, but the first padlock icon (grey) means that the email was sent in plaintext. It's stored encrypted on ProtonMail's side, but the sender's email provider has full access to the email. The second padlock icon (greyish purple) means that the email was _actually_ end-to-end encrypted. As a user, you'll learn this if you hover over the padlock, but the key gotchas are not mentioned anywhere.
+
+ProtonMail does actually provide the ability to send encrypted emails to other providers if you set a symmetric encryption key. You just have to notice the button with a lock on it and know that you have to manually set it up. Of course, if all you've read is ProtonMail's marketing materials and their UI, you probably won't know that this is necessary to get the advertised security.
+
+![The "send email" toolbar showing a button with a padlock on it](/img/protonmail-send-encryption.png)
+
+I would love to see user studies of ProtonMail's security. If previous work gives us any indication, we can reasonably guess that a large proportion of users will not be aware that e.g. Google can read their emails when they send them to Gmail users. I would also love to be proven wrong on this: if you know of such research, please let me know!
+
+I'm not saying that anyone should stop using ProtonMail. But perhaps we should stop making unrealistic claims about what is possible, security-wise, for a protocol that was developed in the 90s for a very different world. Maybe we should look to [more](https://signal.org/docs/) [modern](https://messaginglayersecurity.rocks/) [protocols](https://gitlab.matrix.org/matrix-org/olm/blob/master/docs/megolm.md) for our secure communications needs. At the very least, please stop throwing a padlock icon on everything that has some relation to the abstract concept of "security".

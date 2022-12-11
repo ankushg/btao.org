@@ -1,0 +1,59 @@
+---
+title: "A web of trust for npm"
+date: 2020-10-02
+---
+
+In 1984 the co-inventor of Unix, Ken Thompson, delivered a seminal speech in which he highlighted that _you can't trust code that you did not totally create yourself_ [^1]. For a while, this lesson was largely ignored as open-source package registries like RubyGems, PyPI and npm grew rapidly. However, as we're seeing [more](https://blog.reversinglabs.com/blog/mining-for-malicious-ruby-gems) [and](https://blog.npmjs.org/post/185397814280/plot-to-steal-cryptocurrency-foiled-by-the-npm) [more](https://snyk.io/blog/a-post-mortem-of-the-malicious-event-stream-backdoor/) supply-chain attacks through software dependencies, the risks of using unvetted dependencies are becoming clearer.
+
+The risks are particularly great for JavaScript applications. Veracode found that the average JavaScript project relies on 377 dependencies -- compared with just 16 for Python projects, or 43 in the Java ecosystem[^2]. Whenever a developer pulls in a new dependency, they are implicitly trusting the maintainers of that dependency. Often, this trust is awarded on the basis of popularity -- we assume that a popular library will be more carefully vetted, or that since many others trust the maintainers, we can too. Other times, this trust relationship and the risks involved are not considered at all.
+
+[Some have argued](https://sambleckley.com/writing/npm.html) that the ill health of the npm registry is a social, rather than a technical problem, and suggest a human-compiled set of packages in order to separate the wheat of maintained, healthy packages from the chaff of abandoned toy projects with no documentation. [Another suggestion from the Rust world](https://medium.com/@dpc_96143/cargo-crev-and-rust-2019-fearless-code-reuse-b75d58398cb8) involves creating a manual web of trust from maintainers cryptographically signing each other's projects. Either way, there are challenges: webs of trust have rarely taken off (outside of Debian), and compiling a vetted set of packages from scratch is a massive undertaking. I propose something in the middle: bootstrapping a web of trust using existing npm dependency relationships, and building from that foundation.
+
+## Existing trust relationships in npm
+
+Creating a web of trust from existing npm dependencies is, admittedly, somewhat problematic. As stated earlier, choosing to use a particular dependency is not always a well-considered decision based on researching its code and maintainers, and the trust relationship is merely implied. Similarly, there is no cryptographic verification of this weak trust, nor does npm currently have the infrastructure for such tools[^3]. What I am suggesting is an imperfect starting point to demonstrate the need for, and potential of, stronger trust measures in open source.
+
+To construct this initial web, we can model npm's maintainerships as a graph. If we let each node be a maintainer, then the edges between them are the trust relationship arising from using a dependency. In other words, if Alice maintains a package A, and A depends on package B maintained by Bob, then there is a directed edge from Alice to Bob. We can even weigh these edges by the number of Alice's packages in which she implies trust of Bob.
+
+## Exploring the graph
+
+This simple model exhibits a power-law-like pattern in terms of trust: the vast majority of users are trusted by few or no others, and a very small number of users are highly trusted. This type of pattern is common in social networks: you see a similar thing emerge when plotting follower counts on Twitter. Such power laws often lead to a rich-get-richer feedback process in which the inequality (in terms of trust, in this case) gets more pronounced over time[^4].
+
+![Scatter plot of in-degree vs. number of users. Shows a roughly power-law relationship.](/img/maintainer-wot-in-degrees.png)
+
+Who are these highly-trusted users? They're who you'd expect: bots for large projects (e.g. `types`), corporate accounts (e.g. `fb`), and the maintainers of extremely popular open-source libraries (e.g. `sindresorhus`, who maintains e.g. `string-length`).
+
+Perhaps more interestingly, this web of trust exhibits some useful structures. A number of [strongly connected components](https://en.wikipedia.org/wiki/Strongly_connected_component) emerge -- groups of users that, roughly speaking, all trust each other according to the web of trust principles (i.e. if I trust Alice, and Alice trusts Bob, then I trust Bob, too). All of these connected components are small, with the exception of a single one that's home to over 11,000 users[^5]. This core component -- we'll call it the **strong set** -- could provide a starting point for a measure of trust in the npm ecosystem.
+
+## Fun with PageRank
+
+We can quantify trust in a slightly more nuanced way than simply looking at the in-degree of each npm user. The PageRank algorithm provides such a measure that takes into account the trustworthiness of the people who trust me. For example, I may only be trusted by one user, but if that user is `isaacs` (the creator of npm) then that trust relationship counts for a lot! After running PageRank, the 10 "most-trusted" users are:
+
+1. `types`
+2. `sindresorhus`
+3. `angular`
+4. `m1tk4`
+5. `tjholowaychuk`
+6. `google-wombot`
+7. `fb`
+8. `isaacs`
+9. `gaearon`
+10. `yyx990803`
+
+Many of these are unsurprising. However, `m1tk4` stands out: they only maintain two rarely-downloaded libraries. Because one of these libraries is used by the BBC, `m1tk4` is implicitly trusted by a large number of relatively trustworthy BBC employees who maintain other, more popular projects. This demonstrates how PageRank diffuses trust across the social network of npm maintainers. In fact, `m1tk4` is not a member of the strong set mentioned earlier -- but many of the users who trust them _are_. `m1tk4` just doesn't trust those users back!
+
+While PageRank gives a fun measure of trust, it's a very rough model for the reasons mentioned earlier: it's based on a pretty weak indication of real trust. However, it might be useful in detecting suspicious behaviours in npm, which is something we -- or registry maintainers -- need to do proactively if we want to stop supply-chain attacks. For example, it might be a red flag if a highly-trusted user suddenly starts using a library by someone with a PageRank-based-trust of close to 0. And regardless, the strong set comes merely from observing which dependencies people choose to use without applying any complex calculations.
+
+How might we want to use the strong set to create a stricter trust (or reputation) system? I think that formalizing such a system is unlikely if it requires large-scale buy-in from npm users. Instead, we might create a simple wrapper for npm that checks if you're about to install something from a developer outside of the strong set, similar to Liran Tal's excellent [npq](https://github.com/lirantal/npq). Or perhaps security researchers could use the npm web of trust as an additional data point when deciding whether a suspicious package warrants further investigation. Either way, the state of trust within the npm ecosystem is not great. This model gives us a starting point.
+
+_Do you think I've got it all wrong? Or do you have further suggestions on how we can improve the state of trust in open source? [Get in touch](/contact)._
+
+_A final note: this analysis is based on data from June 2020, which I collected for my Master's thesis. I believe you'd reach similar numbers if you ran the analysis on data from today._
+
+### Footnotes
+
+[^1]: [Reflections on trusting trust](https://dl.acm.org/doi/pdf/10.1145/358198.358210)
+[^2]: [VeraCode's State of Software Security report](https://info.veracode.com/report-state-of-software-security-open-source-edition.html)
+[^3]: Given what we know about the usability challenges of a cryptographic web of trust, I'm not too sure this is a realistic path forward, either.
+[^4]: For a great book about social and technological networks, check out [Networks, Crowds, and Markets: Reasoning About a Highly Connected World](http://www.cs.cornell.edu/home/kleinber/networks-book/) by Kleinberg and Easley.
+[^5]: Only about 5% of npm users are part of a strongly connected component, whether it's big or small.

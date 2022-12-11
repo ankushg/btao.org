@@ -1,0 +1,25 @@
+---
+import Card from "./Card/Card.astro";
+import CardTitle from "./Card/CardTitle.astro";
+import CardEyebrow from "./Card/CardEyebrow.astro";
+import CardDescription from "./Card/CardDescription.astro";
+import CardCta from "./Card/CardCta.astro";
+import type { Article } from "../types";
+import { formatDate } from "../utils";
+
+interface Props {
+  article: Article;
+}
+const { article } = Astro.props;
+---
+
+<Card component="article">
+  <CardTitle href={article.url}>
+    {article.title}
+  </CardTitle>
+  <CardEyebrow component="time" dateTime={article.date} decorate>
+    {formatDate(article.date)}
+  </CardEyebrow>
+  <CardDescription>{article.description}</CardDescription>
+  <CardCta>Read article</CardCta>
+</Card>

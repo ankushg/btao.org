@@ -1,0 +1,47 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<script>
+  function disableTransitionsTemporarily() {
+    document.documentElement.classList.add("[&_*]:!transition-none");
+    window.setTimeout(() => {
+      document.documentElement.classList.remove("[&_*]:!transition-none");
+    }, 0);
+  }
+
+  function toggleMode() {
+    console.log("toggling mode");
+    disableTransitionsTemporarily();
+
+    let darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    let isSystemDarkMode = darkModeMediaQuery.matches;
+    let isDarkMode = document.documentElement.classList.toggle("dark");
+
+    if (isDarkMode === isSystemDarkMode) {
+      delete window.localStorage.isDarkMode;
+    } else {
+      window.localStorage.isDarkMode = isDarkMode;
+    }
+  }
+  console.log("loading toggleMode");
+  window.toggleMode = toggleMode;
+</script>
+
+<button
+  type="button"
+  aria-label="Toggle dark mode"
+  class="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
+  onclick="window.toggleMode()"
+>
+  <Icon
+    pack="heroicons-outline"
+    name="sun"
+    class="h-6 w-6 text-zinc-500 transition dark:hidden"
+  />
+  <Icon
+    pack="heroicons-outline"
+    name="moon"
+    class="hidden h-6 w-6 text-zinc-500 transition dark:block"
+  />
+</button>

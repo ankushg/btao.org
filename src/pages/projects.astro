@@ -1,0 +1,103 @@
+---
+import SimpleLayout from "../layouts/SimpleLayout.astro";
+import Card from "../components/Card/Card.astro";
+import CardLink from "../components/Card/CardLink.astro";
+import CardDescription from "../components/Card/CardDescription.astro";
+import { Icon } from "astro-icon";
+
+type Link = { href: string; label: string };
+type Icon = { pack: string; name: string };
+type Project = {
+  name: string;
+  description: string;
+  link: Link;
+  logo: string | Icon;
+};
+const projects: Project[] = [
+  {
+    name: "Shroud.email",
+    description:
+      "Your email address is your de facto ID on the web. Shroud.email helps protect it with tracker-blocking aliases.",
+    link: {
+      href: "https://shroud.email",
+      label: "shroud.email",
+    },
+    logo: "/img/shroud-logo.png",
+  },
+  {
+    name: "xray.computer",
+    description:
+      "There's no guarantee that the code on a project's GitHub corresponds to what's published to package registries like npm. xray.computer lets you view the actual, published code before you install a package.",
+    link: {
+      href: "https://gitlab.com/tao_oat/xray",
+      label: "gitlab.com",
+    },
+    logo: {
+      pack: "heroicons-outline",
+      name: "code",
+    },
+  },
+  {
+    name: "fediverse.space",
+    description: "Visualize decentralized social networks like Mastodon.",
+    link: {
+      href: "https://gitlab.com/fediverse.space/fediverse.space",
+      label: "gitlab.com",
+    },
+    logo: "/img/fediversespace.png",
+  },
+  {
+    name: "Death Quotes",
+    description: "Amazon Echo skill that reads you a random quote about death.",
+    link: {
+      href: "https://gitlab.com/tao_oat/alexa-death-quotes",
+      label: "gitlab.com",
+    },
+    logo: {
+      pack: "bx",
+      name: "bxs-skull",
+    },
+  },
+];
+---
+
+<SimpleLayout
+  pageTitle="Projects"
+  title="My favorite projects"
+  intro="I've worked on a lot of things, but these are the most interesting to me. I try to use free software licenses whenever possible, so all of these are open for contributions!"
+>
+  <ul
+    role="list"
+    class="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
+  >
+    {
+      projects.map((project) => (
+        <Card component="li">
+          <div class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+            {typeof project.logo === "string" ? (
+              <img src={project.logo} alt="" class="h-8 w-8 rounded-full" />
+            ) : (
+              <Icon
+                pack={project.logo.pack}
+                name={project.logo.name}
+                class="h-8 w-8 rounded-full text-zinc-500"
+              />
+            )}
+          </div>
+          <h2 class="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+            <CardLink href={project.link.href}>{project.name}</CardLink>
+          </h2>
+          <CardDescription>{project.description}</CardDescription>
+          <p class="relative z-10 mt-6 flex items-center gap-x-2 text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
+            <Icon
+              pack="heroicons-outline"
+              name="link"
+              class="h-4 w-4 flex-none"
+            />
+            <span>{project.link.label}</span>
+          </p>
+        </Card>
+      ))
+    }
+  </ul>
+</SimpleLayout>

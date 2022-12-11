@@ -1,0 +1,131 @@
+---
+title: "On mixing plaintext and encrypted messages"
+date: 2020-05-28
+---
+
+Several security-focused messaging apps give users the ability to choose
+between two modes: unencrypted chats, or end-to-end encrypted ones that might
+lack certain features. This is an anti-pattern when it comes to usable
+security, and it brings some risks that are rarely discussed.
+
+There are several different implementations of this mixing and matching of
+secure and insecure communications. Some chat apps default to unencrypted
+messages, but allow users to manually enable end-to-end encryption for
+certain threads. Others automatically start a secure channel if the
+recipient's client supports the right features -- a type of opportunistic
+encryption. Examples of the former include Telegram and Facebook Messenger:
+users must explicitly start a "secret chat" if they want end-to-end
+encryption. In the other category, you have apps like [Delta
+Chat](https://delta.chat/en/) -- an email-based instant messenger that uses
+[Autocrypt](https://autocrypt.org/) to automate PGP key distribution and
+message encryption. Even Signal, which is generally celebrated for its strong
+security, can be used as the default SMS app on Android phones -- allowing it
+to send plaintext text messages to contacts who don't use Signal. "Secure"
+email providers like ProtonMail also fall into this category.
+
+This probably doesn't sound so bad. After all, encrypting _some_ messages is
+better than encrypting none, and users who have high security needs can just
+enable the encryption features they want, right? Unfortunately, this does not
+accurately represent how users understand and use secure communication tools.
+
+## Communication problems
+
+The core problem is that communicating security features to end users is
+_hard_. There are often nuances and conditions that are opaque unless you're a
+technical user with significant security knowledge. For example: in Delta
+Chat, messages are only encrypted if the recipient also uses a client with
+Autocrypt, and messages are never encrypted before you've received a response
+(with the other party's public key as a header). It's not easy to inform
+users of these conditions, and the communication difficulties are not unique
+to Delta Chat: PGP without Autocrypt is famously opaque and difficult to
+use[^1] and key verification in modern messaging apps is often done
+incorrectly because users do not understand it[^2].
+
+An obvious solution is to use indicators. Many apps use passive indicators
+that don't impede the users' actions, but they let them know that some
+security feature is present or missing. The most common passive indicator is
+perhaps the lock icon in a browser toolbar indicating a HTTPS connection.
+However, studies show that thile users do look at passive indicators[^3],
+they are rarely heeded and do not change user behaviour[^4].
+
+In Delta Chat, encrypted messages have a passive indicator in the form of a
+small lock icon, but unless you're looking out for it, you won't notice
+anything unusual about plaintext messages:
+
+![Plaintext and encrypted chat UI in Delta
+Chat](/img/deltachat-encrypted-vs-plaintext.png)
+
+If your friend just told you to download a new, secure communication tool,
+you won't know that you have to look out for the lock icon or that you must
+enable a specific security feature in the settings. The app might try to tell
+you these things, but anyone who's ever seen people rapidly click through
+alerts to get to their goal knows that we can't rely on people reading these
+in detail. At this point, some might object that it isn't the app developers'
+fault if users misrepresent its security features. This is true, but when we
+start implementing things like end-to-end encryption, we should expect this
+to happen and make sure that the app doesn't let users shoot themselves in
+the foot in terms of security.
+
+High-risk users need their communications to be encrypted reliably, and
+expecting people to manually verify security features is unfortunately not
+very realistic. Telegram is a good example. It markets itself as a secure and
+private messenger, but defaults to using plaintext chats. In a usability
+study of Telegram, researchers found that while users felt they were using a
+secure tool, they were rarely (if ever) using secret chats. Most users did
+not understand the difference between the default chat mode and secret chats,
+and less than half used secret chats when asked to send sensitive
+information[^5].
+
+All messengers that mix insecure and secure modes face the same problem.
+Their security relies on users understanding quite a few things, for example
+that a key exchange must happen over the initial messages (Delta Chat), or
+that messages will only be encrypted if the recipient uses a compatible
+client (Signal). Based on what we know from the field of usable security, we
+cannot expect end users to keep these security gotchas in mind. As
+developers, we should operate under the assumption that any such gotchas will
+be misunderstood or forgotten by a significant number of users.
+
+## Binary thinking
+
+In 2017, The Guardian published an alarmist article claiming that WhatApp's
+encryption had a backdoor. This was not true -- their article was really
+about a reasonable tradeoff made by WhatsApp's developers to balance security
+with usability for its two billion users. Their article was quickly met with
+[an outcry from security
+professionals](http://technosociology.org/?page_id=1687). These experts
+pointed out that The Guardian's flawed reporting had caused WhatsApp to be
+considered unsafe among some activists and journalists who were instead
+switching to far less secure alternatives like SMS. The lesson to be learned
+is that when developing messaging apps, we should strive for security that
+fits a straightforward mental model: secure or not secure. Of course there
+are nuances around threat models, but we must have a reasonable security
+baseline -- which it is impossible to provide if your app falls back to
+sending unencrypted messages.
+
+There is also non-academic evidence that these are real risks. You'll find
+posts from users complaining that they unknowingly sent plaintext messages in
+[Delta
+Chat](https://support.delta.chat/t/i-just-had-it-happen-that-messages-were-send-unencrypted/526)
+and [Signal](https://github.com/signalapp/Signal-Android/issues/5531). Others
+point out that email subject lines may [leak the contents of otherwise
+encrypted
+messages](https://support.delta.chat/t/possible-thunderbird-gotcha/272)[^6].
+A [recent
+article](https://www.vodafone.de/featured/apps/delta-chat-app-funktionen-e-mail-test/)
+on Delta Chat in a German magazine noted that "of course, all messages are
+encrypted" before showing a screenshot of an unencrypted chat.
+
+I'm all for raising the overall level of end-to-end encrypted communications
+on the internet, but we need to make sure that we recommend tools that are
+appropriate to users' threat models, and that work for non-technical users.
+Opportunistic and optional encryption are useful for mitigating mass
+surveillance, but high-risk users must be confident that they won't
+inadvertently send confidential information over an insecure channel.
+Opportunistic and optional encryption cannot provide this guarantee.
+
+[^1]: Whitten, Alma, and J. Doug Tygar. "Why Johnny Can't Encrypt: A Usability Evaluation of PGP 5.0." _USENIX Security Symposium._ Vol. 348. 1999.
+[^2]: Schröder, Svenja, et al. "When Signal hits the fan: On the usability and security of state-of-the-art secure mobile messaging." _European Workshop on Usable Security._ IEEE. 2016.
+[^3]: Whalen, Tara, and Kori M. Inkpen. "Gathering evidence: use of visual security cues in web browsers." _Proceedings of Graphics Interface 2005_. Canadian Human-Computer Communications Society, 2005.
+[^4]: Schecter, Stuart, et al. "The emperor’s new security indicators: An evaluation of website authentication and the effect of role playing on usability studies." _Proc. IEEE Symposium on Security and Privacy (S&P)_. 2007. Cited in Whalen, Tara, and Kori M. Inkpen. "Gathering evidence: use of visual security cues in web browsers." _Proceedings of Graphics Interface 2005_. Canadian Human-Computer Communications Society, 2005.
+[^5]: Abu-Salma, Ruba, et al. "The security blanket of the chat world: An analytic evaluation and a user study of telegram." Internet Society, 2017.
+[^6]: Any PGP client, no matter how usable and secure, will have to interface with the [horrendous PGP ecosystem](https://blog.cryptographyengineering.com/2014/08/13/whats-matter-with-pgp/).

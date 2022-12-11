@@ -1,0 +1,17 @@
+---
+import ArticleLayout from "../../layouts/ArticleLayout.astro";
+import { slugFromFile } from "./_utils";
+
+export async function getStaticPaths() {
+  const articles = await Astro.glob("../../content/articles/*.mdx");
+  return articles.map((post) => ({
+    params: { slug: slugFromFile(post.file) },
+    props: post,
+  }));
+}
+const { frontmatter, default: Content } = Astro.props;
+---
+
+<ArticleLayout content={frontmatter}>
+  <Content />
+</ArticleLayout>
