@@ -55,7 +55,13 @@ const finalTitle = title ? `${title} | Tao Bojlén` : "Tao Bojlén";
   </body>
 </html>
 
-<script is:inline defer="" data-domain="btao.org" src="/js/script.js"></script>
+<script
+  is:inline
+  defer=""
+  data-domain="btao.org"
+  data-api="/workers/btao/event"
+  src="/workers/btao/script.outbound-links.js"
+></script>
 
 <script>
   let darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
