@@ -11,7 +11,6 @@ import { Icon } from "astro-icon";
   }
 
   function toggleMode() {
-    console.log("toggling mode");
     disableTransitionsTemporarily();
 
     let darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
@@ -24,7 +23,6 @@ import { Icon } from "astro-icon";
       window.localStorage.isDarkMode = isDarkMode;
     }
   }
-  console.log("loading toggleMode");
   window.toggleMode = toggleMode;
 </script>
 
