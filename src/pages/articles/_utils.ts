@@ -3,7 +3,7 @@ import type { MarkdownInstance } from "astro";
 import { Article, ArticleSchema } from "../../types";
 
 export const slugFromFile = (file: string) => path.parse(file).name;
-const urlFromContentUrl = (url: string) => {
+export const urlFromContentUrl = (url: string) => {
   const { dir, name } = path.parse(url);
   return path.join(dir.replace("src/content", ""), name, "/");
 };

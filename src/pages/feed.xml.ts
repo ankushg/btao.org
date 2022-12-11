@@ -1,15 +1,27 @@
 import rss from "@astrojs/rss";
 import type { MarkdownInstance } from "astro";
-import { parse } from "date-fns";
-import type { ArticleFrontmatter } from "./articles/_utils";
+import { ArticleFrontmatter, slugFromFile } from "./articles/_utils";
 
-const postImportResult = import.meta.glob("../content/articles/*.mdx", {
-  eager: true,
-}) as Record<string, MarkdownInstance<ArticleFrontmatter>>;
-const posts = Object.values(postImportResult);
+function sortPosts(a, b) {
+  return (
+    Number(new Date(b.frontmatter.publishDate)) -
+    Number(new Date(a.frontmatter.publishDate))
+  );
+}
 
-export const get = () =>
-  rss({
+function formatDate(dateStr: string) {
+  const date = new Date(dateStr);
+  date.setUTCHours(0);
+  return date;
+}
+
+export const get = () => {
+  const allPosts: MarkdownInstance<ArticleFrontmatter>[] = Object.values(
+    import.meta.glob("../content/articles/*.mdx", { eager: true })
+  );
+  const sortedPosts = allPosts.sort((a, b) => sortPosts(a, b));
+
+  return rss({
     // `<title>` field in output xml
     title: "Tao Bojlén",
     // `<description>` field in output xml
@@ -21,10 +33,11 @@ export const get = () =>
     // list of `<item>`s in output xml
     // simple example: generate items for every md file in /src/pages
     // see "Generating items" section for required frontmatter and advanced use cases
-    items: posts.map((post) => ({
-      link: post.url || import.meta.env.SITE,
+    items: sortedPosts.map((post) => ({
+      link: `/articles/${slugFromFile(post.url)}`,
       title: post.frontmatter.title,
-      pubDate: post.frontmatter.date,
+      pubDate: formatDate(post.frontmatter.date),
     })),
     customData: "<language>en-us</language>",
   });
+};
