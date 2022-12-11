@@ -69,7 +69,7 @@ const isHomePage = pathname === "/";
         </div>
         <div class="flex flex-1 justify-end md:justify-center">
           <MobileNavigation
-            client:load
+            client:media="(max-width: 768px)"
             className="pointer-events-auto md:hidden"
           />
           <DesktopNavigation class="pointer-events-auto hidden md:block" />
